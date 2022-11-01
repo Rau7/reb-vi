@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+/* START OF FOOTER */
+footer {
+  background-color: black;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10rem;
+  padding-bottom: 12.5rem;
+}
+
+.footer-container p {
+  color: #8e8e8e;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 3.2rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3.2rem;
+}
+
+.footer-link-icon {
+  color: white;
+  height: 28px;
+  width: 34px;
+}
+
+.footer-btn-area {
+  margin-top: 5.5rem;
+}
+
+.footer-btn {
+  color: black;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 10px;
+  border: 5px solid white;
+  background-color: rgba(217, 217, 217, 1);
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+/* END OF FOOTER */
+
+/* START OF CONTACT */
+.contact-section {
+  background-color: rgba(247, 255, 150, 1);
+}
+
+.contact-sec-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10rem;
+  padding-bottom: 12.5rem;
+  color: black;
+}
+
+.contact-section h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 70px;
+  text-align: center;
+}
+
+.contact-section p {
+  margin-top: 5rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.contact-section a {
+  font-weight: 800;
+  font-size: 4rem;
+  color: black;
+  margin-top: 5rem;
+}
+
+/* END OF CONTACT */
+
+/* START OF BELIEVE */
+.believe-sec {
+  background-color: rgba(255, 255, 255, 1);
+  width: 100%;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+}
+
+.believe-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  margin: auto;
+}
+
+.believe-header h1 {
+  text-align: center;
+  line-height: 50px;
+  font-weight: 900;
+  color: black;
+  font-size: 6.4rem;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  padding: 0.75rem;
+}
+
+.believe-header h1::before {
+  content: "";
+  background-color: rgba(183, 150, 255, 1);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transform: rotate(-1deg);
+}
+
+.believe-header h1::after {
+  content: "";
+  background-image: url("../images/star.png");
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  z-index: -1;
+  top: -38px;
+  left: -48px;
+}
+
+.believe-content .content p {
+  color: black;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 40px;
+}
+
+.believe-content .content p span {
+  color: black;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 40px;
+}
+
+.p1 {
+  margin-top: 7.5rem;
+}
+
+.p2,
+.p3 {
+  margin-top: 3.5rem;
+}
+
+/* END OF BELIEVE */
+
+/* START OF GRID */
+.grid-sec {
+  background-color: rgba(255, 255, 255, 1);
+  width: 100%;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+}
+
+.grid-sec-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 1200px;
+  margin: auto;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+.right-text {
+  text-align: right;
+}
+.bged-text {
+  position: relative;
+  display: inline;
+  z-index: 1;
+}
+.content-header h1,
+.bged-text span {
+  font-size: 5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.content-par {
+  margin-top: 2.5rem;
+}
+
+.content-par p {
+  font-size: 2.4rem;
+}
+
+#comparison img,
+.content-img img {
+  height: 704px;
+  width: 484px;
+}
+
+.content-area {
+  margin-top: -15rem;
+  position: relative;
+}
+
+.yellow-back::before {
+  content: "";
+  background-color: rgba(247, 255, 150, 1);
+  height: 135%;
+  width: 109%;
+  position: absolute;
+  z-index: -1;
+  top: -14px;
+  left: -11px;
+  transform: rotate(-1deg);
+}
+
+.purple-back::before {
+  content: "";
+  background-color: rgba(183, 150, 255, 1);
+  height: 135%;
+  width: 109%;
+  position: absolute;
+  z-index: -1;
+  top: -14px;
+  left: -11px;
+  transform: rotate(-1deg);
+}
+
+.c-right:after {
+  content: "";
+  background-image: url("../images/star.png");
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: -38px;
+  right: -48px;
+  transform: rotate(200deg);
+}
+
+.c-left:after {
+  content: "";
+  background-image: url("../images/star.png");
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: -38px;
+  left: -48px;
+  transform: rotate(200deg);
+}
+
+.grid-list .grid-2:not(:first-child) {
+  margin-top: 15rem;
+}
+
+/* END OF GRID */
