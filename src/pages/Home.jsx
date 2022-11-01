@@ -1,5 +1,6 @@
 import React from "react";
 import reblogowhite from "../images/REBLIUM.png";
+import reblogoblack from "../images/reblogoblack.png";
 import {
   FaTwitter,
   FaTiktok,
@@ -14,13 +15,126 @@ import img2 from "../images/456.webp";
 import p1 from "../images/p1.png";
 import p2 from "../images/p2.png";
 import p3 from "../images/p3.png";
+import hero from "../images/hero.png";
 
 function Home() {
   return (
     <>
+      <header>
+        <div className="header-container">
+          <div className="header-logo">
+            <img src={reblogoblack} alt="reblium-logo" />
+          </div>
+          <nav>
+            <ul>
+              <li className="nav-item">
+                <a href="#">For Creators</a>
+              </li>
+              <li className="nav-item">
+                <a href="#">For Brands</a>
+              </li>
+              <li className="nav-item">
+                <a href="#">We Believe</a>
+              </li>
+            </ul>
+            <div className="nav-contact-btn">
+              <a href="#" className="contact-btn">
+                Contact
+              </a>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <section className="hero">
+        <div className="hero-container">
+          <div className="hero-grid">
+            <div className="hero-content">
+              <h1>
+                Create <br />
+                Your own <br />
+                <div className="bged-text-hero">
+                  <span className="hero-back">virtual</span>
+                </div>
+                <br />
+                influencer
+              </h1>
+              <p>
+                Reblium helps creators make their alter ego <br /> to share
+                short-form videos on social media.
+              </p>
+              <div className="hero-btn-area">
+                <a href="#" className="early-btn">
+                  Get Early Access
+                </a>
+              </div>
+            </div>
+            <div className="hero-img-area">
+              <img src={hero} alt="reblium-avatar" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="social-sec">
+        <div className="social-sec-container">
+          <div className="social-list">
+            <div className="social-item">
+              <a href="#">
+                <FaTwitter className="social-link-icon" />
+              </a>
+            </div>
+            <div className="social-item">
+              <a href="#">
+                <FaTiktok className="social-link-icon" />
+              </a>
+            </div>
+            <div className="social-item">
+              <a href="#">
+                <FaInstagram className="social-link-icon" />
+              </a>
+            </div>
+            <div className="social-item">
+              <a href="#">
+                <FaDiscord className="social-link-icon" />
+              </a>
+            </div>
+            <div className="social-item">
+              <a href="#">
+                <FaLinkedin className="social-link-icon" />
+              </a>
+            </div>
+            <div className="social-item">
+              <a href="#">
+                <FaYoutube className="social-link-icon" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="grid-sec">
         <div className="grid-sec-container">
           <div className="grid-list">
+            <div className="grid-2 right-img">
+              <div className="content-area left-text">
+                <div className="content-header c-left">
+                  <h1>
+                    Create Your
+                    <br />
+                    <div className="bged-text">
+                      <span className="purple-back">Alter Ego</span>
+                    </div>
+                  </h1>
+                </div>
+                <div className="content-par">
+                  <p>
+                    It all starts with your avatar. <br /> Fluidly blend between
+                    gender, <br /> ethnicity, age and fantasy!
+                  </p>
+                </div>
+              </div>
+              <div className="content-img">
+                <img src={p1} alt="reblium-snap-videos" />
+              </div>
+            </div>
             <div className="grid-2 left-img">
               <div className="content-img">
                 <img src={p2} alt="reblium-snap-videos" />
