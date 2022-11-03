@@ -8,6 +8,7 @@ import {
   FaDiscord,
   FaLinkedin,
   FaYoutube,
+  FaBars,
 } from "react-icons/fa";
 import "img-comparison-slider";
 import img1 from "../images/455.webp";
@@ -18,6 +19,14 @@ import p3 from "../images/p3.png";
 import hero from "../images/hero.png";
 
 function Home() {
+  function openCloseHam() {
+    const x = document.querySelector(".mobile-menu");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
   return (
     <>
       <header>
@@ -25,24 +34,53 @@ function Home() {
           <div className="header-logo">
             <img src={reblogoblack} alt="reblium-logo" />
           </div>
-          <nav>
-            <ul>
-              <li className="nav-item">
-                <a href="#">For Creators</a>
-              </li>
-              <li className="nav-item">
-                <a href="#">For Brands</a>
-              </li>
-              <li className="nav-item">
-                <a href="#">We Believe</a>
-              </li>
-            </ul>
-            <div className="nav-contact-btn">
-              <a href="#" className="contact-btn">
-                Contact
-              </a>
-            </div>
-          </nav>
+          <div className="desktop-nav">
+            <nav>
+              <ul>
+                <li className="nav-item">
+                  <a href="#">For Creators</a>
+                </li>
+                <li className="nav-item">
+                  <a href="#">For Brands</a>
+                </li>
+                <li className="nav-item">
+                  <a href="#">We Believe</a>
+                </li>
+              </ul>
+              <div className="nav-contact-btn">
+                <a href="#" className="contact-btn">
+                  Contact
+                </a>
+              </div>
+            </nav>
+          </div>
+          <div className="mobile-icon">
+            <button className="ham-btn" onClick={() => openCloseHam()}>
+              <FaBars className="menu-icon" />
+            </button>
+          </div>
+        </div>
+        <div className="mobile-menu">
+          <div className="mob-cont">
+            <nav>
+              <ul>
+                <li className="nav-item">
+                  <a href="#">For Creators</a>
+                </li>
+                <li className="nav-item">
+                  <a href="#">For Brands</a>
+                </li>
+                <li className="nav-item">
+                  <a href="#">We Believe</a>
+                </li>
+                <div className="nav-contact-btn">
+                  <a href="#" className="contact-btn">
+                    Contact
+                  </a>
+                </div>
+              </ul>
+            </nav>
+          </div>
         </div>
       </header>
       <section className="hero">

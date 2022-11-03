@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./css/styles.css";
+import "./css/mobile.css";
 import Home from "./pages/Home";
 
 function App() {

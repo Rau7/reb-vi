@@ -95,13 +95,13 @@ footer {
 
 .contact-section p {
   margin-top: 5rem;
-  font-size: 3rem;
+  font-size: 2.4rem;
   text-align: center;
 }
 
 .contact-section a {
   font-weight: 800;
-  font-size: 4rem;
+  font-size: 3rem;
   color: black;
   margin-top: 5rem;
 }
@@ -130,7 +130,7 @@ footer {
   line-height: 50px;
   font-weight: 900;
   color: black;
-  font-size: 6.4rem;
+  font-size: 6rem;
   text-transform: uppercase;
   position: relative;
   z-index: 1;
@@ -163,14 +163,14 @@ footer {
 .believe-content .content p {
   color: black;
   font-weight: 400;
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 40px;
 }
 
 .believe-content .content p span {
   color: black;
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 40px;
 }
 
@@ -220,7 +220,7 @@ footer {
 }
 .content-header h1,
 .bged-text span {
-  font-size: 5rem;
+  font-size: 4.6rem;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -230,13 +230,13 @@ footer {
 }
 
 .content-par p {
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 #comparison img,
 .content-img img {
-  height: 704px;
-  width: 484px;
+  height: auto;
+  width: 400px;
 }
 
 .content-area {
@@ -311,14 +311,14 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding-right: 5rem;
-  padding-left: 5rem;
+  padding-right: 7.5rem;
+  padding-left: 7.5rem;
 }
 
 .social-link-icon {
   color: black;
-  height: 48px;
-  width: 48px;
+  height: 40px;
+  width: 40px;
 }
 
 /* END OF SOCIAL LINKS */
@@ -337,12 +337,12 @@ footer {
   padding: 4rem 10rem;
 }
 
-nav {
+.desktop-nav nav {
   display: flex;
   gap: 5rem;
 }
 
-nav ul {
+.desktop-nav nav ul {
   list-style: none;
   display: flex;
   gap: 5rem;
@@ -352,7 +352,7 @@ nav ul {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 800;
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: black;
 }
 
@@ -364,8 +364,55 @@ nav ul {
   border-radius: 10px;
   border: 5px solid black;
   background-color: transparent;
-  font-size: 2.4rem;
+  font-size: 2rem;
   text-decoration: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+.mobile-icon {
+  display: none;
+}
+
+.mob-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.mobile-menu nav {
+  display: flex;
+  gap: 5rem;
+}
+
+.mobile-menu nav ul {
+  list-style: none;
+  display: flex;
+  gap: 5rem;
+}
+
+.menu-icon {
+  height: 40px;
+  width: 40px;
+}
+
+.ham-btn {
+  color: black;
+  padding: 0.25rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-radius: 10px;
+  border: 0px solid black;
+  background-color: transparent;
+  font-size: 2rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ham-btn:hover {
+  color: rgba(183, 150, 255, 1);
 }
 
 /* END OF HEADER */
@@ -380,14 +427,14 @@ nav ul {
 }
 
 .hero-content h1 {
-  font-size: 9.6rem;
+  font-size: 7rem;
   font-weight: 800;
   text-transform: uppercase;
-  line-height: 120px;
+  line-height: 80px;
 }
 
 .hero-content p {
-  font-size: 3.2rem;
+  font-size: 3rem;
   line-height: 48px;
   margin-top: 2.5rem;
 }
@@ -404,7 +451,7 @@ nav ul {
   border-radius: 10px;
   border: 7.5px solid black;
   background-color: transparent;
-  font-size: 3rem;
+  font-size: 2.8rem;
   text-decoration: none;
 }
 
@@ -442,10 +489,10 @@ nav ul {
 }
 
 .hero-back {
-  font-size: 9.6rem;
+  font-size: 7rem;
   font-weight: 800;
   text-transform: uppercase;
-  line-height: 120px;
+  line-height: 80px;
 }
 
 /* END OF HERO */
