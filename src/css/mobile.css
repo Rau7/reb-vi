@@ -429,3 +429,9 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 1570px) {
+  .hero-content p br {
+    display: none;
+  }
+}
