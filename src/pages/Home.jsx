@@ -1,6 +1,7 @@
 import React from "react";
 import reblogowhite from "../images/REBLIUM.png";
-import reblogoblack from "../images/reblogoblack.png";
+import reblogoblack from "../images/reb.png";
+import star from "../images/star.png";
 import {
   FaTwitter,
   FaTiktok,
@@ -108,6 +109,9 @@ function Home() {
             </div>
             <div className="hero-img-area">
               <img src={hero} alt="reblium-avatar" />
+              <div className="star-1">
+                <img src={star} alt="reblium-star" />
+              </div>
             </div>
           </div>
         </div>

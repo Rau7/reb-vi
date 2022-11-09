@@ -57,22 +57,22 @@
   .c-right:after {
     content: "";
     background-image: url("../images/star.png");
-    height: 40px;
-    width: 40px;
+    height: 25px;
+    width: 25px;
     position: absolute;
-    top: -30px;
-    right: -40px;
+    top: -20px;
+    right: -30px;
     transform: rotate(200deg);
   }
 
   .c-left:after {
     content: "";
     background-image: url("../images/star.png");
-    height: 40px;
-    width: 40px;
+    height: 25px;
+    width: 25px;
     position: absolute;
-    top: -30px;
-    left: -40px;
+    top: -20px;
+    left: -30px;
     transform: rotate(200deg);
   }
 
@@ -91,6 +91,7 @@
     justify-items: center;
     align-items: center;
     gap: 3rem;
+    padding: 0rem 2rem;
   }
   .left-img {
     flex-direction: column-reverse;
@@ -102,6 +103,32 @@
   .grid-sec {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .c-right:after {
+    background-image: url("../images/star.png");
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: -20px;
+    right: -30px;
+    left: 0px;
+    transform: rotate(200deg);
+    display: none;
+  }
+
+  .c-left:after {
+    background-image: url("../images/star.png");
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: -20px !important;
+    left: -30px !important;
+    right: 0px !important;
+    transform: rotate(200deg);
+    display: none;
   }
 }
 
@@ -124,8 +151,8 @@
   .believe-content {
     width: auto;
     margin: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 /* END OF BELIEVE */
@@ -188,7 +215,7 @@
     line-height: 70px;
   }
   .hero-content p {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     line-height: 36px;
     margin-top: 2.5rem;
   }
@@ -201,11 +228,6 @@
   .early-btn {
     padding: 0.25rem 1rem;
     font-size: 2.4rem;
-  }
-
-  .hero-content {
-    padding-top: 2rem;
-    padding-bottom: 5rem;
   }
 }
 
@@ -273,7 +295,7 @@
   }
 
   .hero-content {
-    padding-top: 2rem;
+    padding-top: 5rem;
     padding-bottom: 5rem;
   }
 

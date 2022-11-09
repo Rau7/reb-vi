@@ -152,6 +152,11 @@ footer {
 .believe-header h1::after {
   content: "";
   background-image: url("../images/star.png");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  resize: both;
+  overflow: scroll;
   height: 40px;
   width: 40px;
   position: absolute;
@@ -189,8 +194,8 @@ footer {
 .grid-sec {
   background-color: rgba(255, 255, 255, 1);
   width: 100%;
-  padding-top: 7.5rem;
-  padding-bottom: 7.5rem;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
 }
 
 .grid-sec-container {
@@ -271,6 +276,11 @@ footer {
 .c-right:after {
   content: "";
   background-image: url("../images/star.png");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  resize: both;
+  overflow: scroll;
   height: 40px;
   width: 40px;
   position: absolute;
@@ -282,6 +292,11 @@ footer {
 .c-left:after {
   content: "";
   background-image: url("../images/star.png");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  resize: both;
+  overflow: scroll;
   height: 40px;
   width: 40px;
   position: absolute;
@@ -326,8 +341,8 @@ footer {
 /* START OF HEADER */
 
 .header-logo img {
-  height: 62px;
-  width: 286px;
+  height: 50px;
+  width: auto;
 }
 
 .header-container {
@@ -426,6 +441,11 @@ footer {
   padding-left: 10rem;
 }
 
+.hero-content {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
 .hero-content h1 {
   font-size: 7rem;
   font-weight: 800;
@@ -462,7 +482,7 @@ footer {
 }
 
 .hero-container {
-  background-color: rgba(217, 217, 217, 1);
+  background-color: rgb(244 246 246);
   border-radius: 25px;
 }
 
@@ -493,6 +513,21 @@ footer {
   font-weight: 800;
   text-transform: uppercase;
   line-height: 80px;
+}
+
+.hero-img-area {
+  position: relative;
+}
+
+.star-1 img {
+  height: 40px;
+  width: 40px;
+}
+
+.star-1 {
+  position: absolute;
+  top: -15px;
+  left: -11px;
 }
 
 /* END OF HERO */
