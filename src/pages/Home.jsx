@@ -109,9 +109,7 @@ function Home() {
             </div>
             <div className="hero-img-area">
               <img src={hero} alt="reblium-avatar" />
-              <div className="star-1">
-                <img src={star} alt="reblium-star" />
-              </div>
+              <div className="star-1"></div>
             </div>
           </div>
         </div>
