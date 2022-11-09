@@ -130,6 +130,10 @@
     transform: rotate(200deg);
     display: none;
   }
+
+  .believe-header h1::after {
+    display: none;
+  }
 }
 
 /* END OF GRID AREA */
@@ -151,8 +155,8 @@
   .believe-content {
     width: auto;
     margin: auto;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 /* END OF BELIEVE */
@@ -202,6 +206,10 @@
   .footer-btn {
     padding: 0.75rem 1.25rem;
     font-size: 1.4rem;
+  }
+  .footer-container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 
@@ -333,12 +341,12 @@
 
 @media screen and (max-width: 768px) {
   .header-container {
-    padding: 4rem 1rem;
+    padding: 2.5rem 1rem;
   }
 
   .header-logo img {
     height: auto;
-    width: 250px;
+    width: 155px;
   }
   .mob-cont {
     padding: 0rem 1rem;
@@ -405,7 +413,7 @@
 @media screen and (max-width: 400px) {
   .header-logo img {
     height: auto;
-    width: 180px;
+    width: 145px;
   }
 
   .menu-icon {
@@ -415,3 +423,9 @@
 }
 
 /* END OF HEADER */
+
+@media screen and (max-width: 400px) {
+  p br {
+    display: none;
+  }
+}

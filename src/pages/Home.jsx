@@ -182,7 +182,7 @@ function Home() {
               <div className="content-area right-text">
                 <div className="content-header c-right">
                   <h1>
-                    Coustumize
+                    Customize
                     <br />
                     <div className="bged-text">
                       <span className="yellow-back">Your Style</span>
@@ -191,8 +191,10 @@ function Home() {
                 </div>
                 <div className="content-par">
                   <p>
-                    Explore different looks with <br /> remixable fashion items
-                    and in- <br /> app purchases from brands.
+                    Explore different looks with
+                    <br />
+                    remixable fashion items and in-app <br />
+                    purchases from brands.
                   </p>
                 </div>
               </div>
