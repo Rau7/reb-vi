@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom";
-import "./css/styles.css";
-import "./css/mobile.css";
-import Home from "./pages/Home";
+import "./css/stylev2.css";
+import "./css/mobilev2.css";
+import Landing from "./pages/Landing";
 
 function App() {
   return (
     <Routes>
-      <Route exact path="/" element={<Home />} />
+      <Route exact path="/" element={<Landing />} />
     </Routes>
   );
 }

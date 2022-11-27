@@ -1,0 +1,524 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: black;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+/* START OF HERO SECTION */
+
+.hero-container video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.hero {
+  position: relative;
+}
+
+/* END OF HERO SECTION */
+
+/*TICKER*/
+
+.ticker-area {
+  height: 5rem;
+  background: linear-gradient(
+    270deg,
+    #00d1b0 0,
+    #00e94f 48.96%,
+    #0093ff 73.96%,
+    #e08af4 97.92%
+  );
+}
+
+.ticker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ticker__list {
+  display: flex;
+  margin-top: 7.5px;
+  animation: ticker 15s infinite linear;
+}
+.ticker:hover .ticker__list {
+  animation-play-state: paused;
+}
+.ticker__item {
+  margin-right: 5rem;
+  width: 27rem;
+}
+@-moz-keyframes ticker {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes ticker {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-o-keyframes ticker {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes ticker {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.ticker-lnk {
+  color: black;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.ticker-icon {
+  height: 23px;
+  width: 23px;
+  color: black;
+}
+
+.ic-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* END TICKER */
+
+/* EXPAND AREA */
+.expand-area {
+  background-color: black;
+  padding: 5rem 1.5rem;
+}
+
+.expand-container h1 {
+  font-size: 3.7rem;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.expand-container p {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.big-h3 {
+  font-size: 10vw;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(
+    270deg,
+    #00d1b0 0,
+    #00e94f 48.96%,
+    #0093ff 73.96%,
+    #e08af4 97.92%
+  );
+  background-image: linear-gradient(
+    270deg,
+    rgb(0, 209, 176) 0px,
+    rgb(0, 233, 79) 48.96%,
+    rgb(0, 147, 255) 73.96%,
+    rgb(224, 138, 244) 97.92%
+  );
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+/* END OF EXPAND AREA */
+
+/* PARTNERS AREA */
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.single-partner {
+  height: 480px;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.partner-break {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.partner-break h1 {
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+  font-size: 3.9rem;
+}
+
+/* END OF PARTNERS AREA */
+
+/* LANDING MESSAGE */
+
+.landing-message {
+  background: linear-gradient(
+    270deg,
+    #00d1b0 0,
+    #00e94f 48.96%,
+    #0093ff 73.96%,
+    #e08af4 97.92%
+  );
+}
+
+.landing-m-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.landing-m-content h2 {
+  font-size: 5.4rem;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  line-height: 65px;
+}
+
+.landing-m-content p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* END OF LANDING MESSAGE */
+
+/* START OF LANG AREA */
+
+.lang-area {
+  background-color: black;
+  height: 3rem;
+}
+
+.lang-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 10rem;
+}
+
+.lang-changer h3 {
+  margin-top: 5px;
+  color: white;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+/* END OF LANG AREA */
+
+/* START OF HEADER */
+
+.header {
+  position: fixed;
+  top: 10rem;
+  height: 68px;
+  width: 100%;
+  z-index: 99;
+}
+
+.header-container {
+  height: 100%;
+  width: 85%;
+  margin: auto;
+  background: linear-gradient(
+    270deg,
+    #00d1b0 0,
+    #00e94f 48.96%,
+    #0093ff 73.96%,
+    #e08af4 97.92%
+  );
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.header-black {
+  background-color: black;
+  border-radius: 0.5rem;
+  position: absolute;
+  width: 99.4%;
+  height: 97%;
+  top: 1px;
+  left: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo img {
+  width: 185px;
+  height: 28px;
+}
+
+.nav-area {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+  font-size: 1.6rem;
+}
+
+/* END OF HEADER */
+
+/* START OF STATS */
+.stats {
+  background-color: black;
+}
+
+.stats-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  gap: 5rem;
+  padding: 5rem 1rem;
+}
+
+.part-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.p1-ico {
+  font-size: 5rem;
+  color: white;
+}
+
+.p1-wrt h2 {
+  font-size: 3.1rem;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.part-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.p2-wrt-1 h4 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+}
+
+.p2-dot {
+  height: 1rem;
+  width: 1rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.p2-wrt-2 h4 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+}
+
+.part-3 {
+  margin-left: 1.5rem;
+}
+.arrow-ico {
+  font-size: 1.6rem;
+  color: white;
+}
+
+.pinkish:hover {
+  background-color: #e08af4;
+}
+
+.blueish:hover {
+  background-color: #0093ff;
+}
+
+.greenish:hover {
+  background-color: #00d1b0;
+}
+
+.stats-link:hover .p1-ico,
+.stats-link:hover .p1-wrt h2,
+.stats-link:hover .p2-wrt-1 h4,
+.stats-link:hover .p2-wrt-2 h4,
+.stats-link:hover .arrow-ico {
+  color: black;
+}
+.stats-link:hover .p2-dot {
+  background-color: black;
+}
+
+.end-stats-item {
+  width: 100%;
+  height: 0.2rem;
+  background-color: white;
+}
+
+/* END OF STATS */
+
+/* START OF CORP */
+.corporate {
+  background-color: white;
+}
+
+.corp-header {
+  margin-top: 5rem;
+  margin-bottom: 3.75rem;
+}
+
+.corp-container {
+  padding: 5rem 7.5rem;
+}
+
+.corp-header h1 {
+  font-size: 5rem;
+}
+
+.corp-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.corp-item-1,
+.corp-item-2 {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.corp-icon {
+  margin-top: 2.5rem;
+}
+
+.corp-ico {
+  font-size: 7rem;
+  background-color: red;
+
+  /* Create the gradient. */
+  background-image: linear-gradient(45deg, #f3ec78, #af4261);
+
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.corp-wrt h3 {
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+.corp-wrt p {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 10rem;
+}
+
+.corp-btn {
+  width: 300px;
+  height: 100%;
+  border: double 3px transparent;
+  border-radius: 30px;
+  background-image: linear-gradient(white, white),
+    linear-gradient(
+      270deg,
+      #00d1b0 0,
+      #00e94f 48.96%,
+      #0093ff 73.96%,
+      #e08af4 97.92%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-color: red;
+}
+
+.corp-link {
+  display: block;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.corp-link-ico {
+  color: white;
+  font-size: 16px;
+}
+
+.corp-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.corp-link h4 {
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+/* END OF CORP */

@@ -39,5 +39,19 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $(window).scroll(function () {
+          var mass = Math.min(1.5, 1 + 0.005 * $(this).scrollTop());
+
+          mass = 1 + (0.005 * $(this).scrollTop()) / 2 - 0.55;
+
+          if (mass <= 1.54) {
+            $(".big-h3").css("transform", "scale(" + mass + ")");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
