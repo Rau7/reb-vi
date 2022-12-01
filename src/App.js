@@ -1,12 +1,14 @@
 import { Route, Routes } from "react-router-dom";
-import "./css/stylev2.css";
-import "./css/mobilev2.css";
-import Landing from "./pages/Landing";
+import "./css/stylev3.css";
+import "./css/mobilev3.css";
+import Landingv2 from "./pages/Landingv2";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
     <Routes>
-      <Route exact path="/" element={<Landing />} />
+      <Route exact path="/" element={<Landingv2 />} />
+      <Route exact path="/contact" element={<Contact />} />
     </Routes>
   );
 }

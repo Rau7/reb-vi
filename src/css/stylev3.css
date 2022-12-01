@@ -1,0 +1,872 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: black;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+/* START OF HERO SECTION */
+
+.hero-container video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: relative;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero-exp {
+  position: absolute;
+  top: 55%;
+  left: 34%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-exp h1 {
+  margin-top: 2.5rem;
+  color: black;
+  font-size: 9.6rem;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  line-height: 100px;
+  font-family: "Noto Sans Display", sans-serif;
+  letter-spacing: 6%;
+}
+
+.hero-exp p {
+  color: black;
+  font-size: 3.2rem;
+  line-height: 48px;
+}
+
+.hero-btn-area {
+  margin-top: 5rem;
+}
+
+/* END OF HERO */
+
+.header {
+  position: fixed;
+  top: 5rem;
+  height: 68px;
+  width: 100%;
+  z-index: 99;
+}
+
+.header-container {
+  height: 100%;
+  width: 85%;
+  margin: auto;
+  border: double 6px transparent;
+  border-radius: 40px;
+  background-image: linear-gradient(white, white),
+    linear-gradient(
+      270deg,
+      #4eebc0 0,
+      #5733f5 48.96%,
+      #5733f5 73.96%,
+      #eb4ee6 97.92%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-color: red;
+  position: relative;
+}
+
+.header-black {
+  display: block;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  background-color: black;
+  border-radius: 30px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*.header-container {
+  height: 100%;
+  width: 85%;
+  margin: auto;
+  background: linear-gradient(
+    270deg,
+    #00d1b0 0,
+    #00e94f 48.96%,
+    #0093ff 73.96%,
+    #e08af4 97.92%
+  );
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.header-black {
+  background-color: black;
+  border-radius: 0.5rem;
+  position: absolute;
+  width: 99.4%;
+  height: 97%;
+  top: 1px;
+  left: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+.nav-logo img {
+  width: 185px;
+  height: 28px;
+}
+
+.nav-area {
+  padding-left: 15rem;
+  padding-right: 15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+  font-size: 1.6rem;
+  font-family: "Noto Sans Display", sans-serif;
+}
+
+.gren a {
+  color: #4eebc0;
+}
+
+.nav-divider {
+  width: 3px;
+  height: 41px;
+  background-color: #4eebc0;
+}
+
+/* LANDING MESSAGE */
+
+.landing-message {
+  background: linear-gradient(
+    270deg,
+    #4eebc0 0,
+    #5733f5 48.96%,
+    #5733f5 73.96%,
+    #eb4ee6 97.92%
+  );
+}
+
+.landing-m-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.landing-m-content h2 {
+  font-size: 5.4rem;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  line-height: 65px;
+  font-family: "Noto Sans Display", sans-serif;
+}
+
+.landing-m-content p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* END OF LANDING MESSAGE */
+
+/* START OF CORP */
+.corporate {
+  background-color: white;
+}
+
+.corp-header {
+  margin-top: 5rem;
+  margin-bottom: 3.75rem;
+}
+
+.corp-container {
+  padding: 5rem 7.5rem;
+}
+
+.corp-header h1 {
+  font-size: 6.4rem;
+  text-align: center;
+  line-height: 70px;
+  font-family: "Noto Sans Display", sans-serif;
+}
+
+.corp-header p {
+  margin-top: 5rem;
+  font-size: 3.2rem;
+  text-align: center;
+  line-height: 35px;
+}
+
+.corp-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.corp-item-1,
+.corp-item-2 {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.corp-icon {
+  margin-top: 2.5rem;
+}
+
+.corp-ico {
+  font-size: 7rem;
+  background-color: red;
+
+  /* Create the gradient. */
+  background-image: linear-gradient(45deg, #f3ec78, #af4261);
+
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.corp-wrt h3 {
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+.corp-wrt p {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 10rem;
+}
+
+.corp-btn-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.corp-btn {
+  width: 300px;
+  height: 100%;
+  border: double 3px transparent;
+  border-radius: 30px;
+  background-color: black;
+}
+
+.corp-link {
+  display: block;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.corp-link-ico {
+  color: white;
+  font-size: 16px;
+}
+
+.corp-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.corp-link h4 {
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: linear-gradient(
+    270deg,
+    #4eebc0 0%,
+    #5733f5 61.96%,
+    #eb4ee6 76.92%
+  );
+  background-image: linear-gradient(
+    270deg,
+    #4eebc0 0%,
+    #5733f5 61.96%,
+    #eb4ee6 76.92%
+  );
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* END OF CORP */
+
+/* START OF STATS */
+.stats {
+  background-color: black;
+}
+
+.stats-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  gap: 5rem;
+  padding: 5rem 1rem;
+}
+
+.part-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.p1-ico {
+  font-size: 5rem;
+  color: white;
+}
+
+.p1-wrt h2 {
+  font-size: 3.1rem;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.part-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.p2-wrt-1 h4 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+}
+
+.p2-dot {
+  height: 1rem;
+  width: 1rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.p2-wrt-2 h4 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+}
+
+.part-3 {
+  margin-left: 1.5rem;
+}
+.arrow-ico {
+  font-size: 1.6rem;
+  color: white;
+}
+
+.pinkish:hover {
+  background-color: #e08af4;
+}
+
+.blueish:hover {
+  background-color: #0093ff;
+}
+
+.greenish:hover {
+  background-color: #00d1b0;
+}
+
+.stats-link:hover .p1-ico,
+.stats-link:hover .p1-wrt h2,
+.stats-link:hover .p2-wrt-1 h4,
+.stats-link:hover .p2-wrt-2 h4,
+.stats-link:hover .arrow-ico {
+  color: black;
+}
+.stats-link:hover .p2-dot {
+  background-color: black;
+}
+
+.end-stats-item {
+  width: 100%;
+  height: 0.2rem;
+  background-color: white;
+}
+
+/* END OF STATS */
+
+/* EXPAND AREA */
+.expand-area {
+  background-color: black;
+  padding: 5rem 1.5rem;
+}
+
+.expand-container h1 {
+  font-size: 3.7rem;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Noto Sans Display", sans-serif;
+}
+
+.expand-container p {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.big-h3 {
+  font-size: 9.6rem;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(
+    270deg,
+    #4eebc0 28%,
+    #5733f5 50.96%,
+    #eb4ee6 75.92%
+  );
+  background-image: linear-gradient(
+    270deg,
+    #4eebc0 28%,
+    #5733f5 50.96%,
+    #eb4ee6 75.92%
+  );
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  line-height: 100px;
+  font-family: "Noto Sans Display", sans-serif;
+}
+/* END OF EXPAND AREA */
+
+/* START OF LANDING GRID AREA */
+
+.lnd-grid-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: space-between;
+  align-items: center;
+}
+
+.lnd-item-wrt-area h1 {
+  font-size: 6.4rem;
+  line-height: 75px;
+  text-align: left;
+  text-transform: uppercase;
+  background: linear-gradient(
+    270deg,
+    #4eebc0 39%,
+    #5733f5 65.96%,
+    #eb4ee6 100%
+  );
+  background-image: linear-gradient(
+    270deg,
+    #4eebc0 39%,
+    #5733f5 65.96%,
+    #eb4ee6 100%
+  );
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Noto Sans Display", sans-serif;
+}
+
+.lnd-item-wrt-area p {
+  margin-top: 1rem;
+  color: white;
+  font-size: 3.2rem;
+  line-height: 48px;
+}
+
+.landing-grid-area {
+  width: 100%;
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+
+.lnd-grid-list .lnd-grid-item:not(:first-child) {
+  margin-top: 5rem;
+}
+
+.landing-grid-container {
+  max-width: 1095px;
+  width: 65%;
+}
+
+.img-right .lnd-item-img-area {
+  text-align: right;
+}
+
+.img-right .lnd-item-wrt-area h1,
+.img-right .lnd-item-wrt-area p {
+  text-align: left;
+}
+
+.img-left .lnd-item-wrt-area h1,
+.img-left .lnd-item-wrt-area p {
+  text-align: right;
+}
+
+.img-left .lnd-item-img-area {
+  text-align: left;
+}
+
+.lnd-item-img-area img {
+  width: 412.5px;
+  height: 600px;
+}
+
+/* END OF LANDING GRID AREA */
+
+.landing-info {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.landing-info-container {
+  width: 65%;
+  margin: auto;
+}
+
+.lnd-info-list .lnd-info-item:not(:first-child) {
+  margin-top: 5rem;
+}
+
+.lnd-info-item {
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10rem;
+}
+
+.lnd-info-item h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-family: "Noto Sans Display", sans-serif;
+}
+
+.lnd-info-item p {
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+/* START OF LANDING INFO AREA */
+
+/* END OF LANDING INFO AREA */
+
+/* START OF FOOTER */
+footer {
+  background-color: black;
+}
+
+.corp-link-footer h4 {
+  color: black;
+  font-size: 16px;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-btn-area .corp-btn {
+  background: linear-gradient(
+    270deg,
+    #4eebc0 0%,
+    #5733f5 61.96%,
+    #eb4ee6 76.92%
+  );
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10rem;
+  padding-bottom: 12.5rem;
+}
+
+.footer-container p {
+  color: #8e8e8e;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 3.2rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3.2rem;
+}
+
+.footer-link-icon {
+  color: white;
+  height: 28px;
+  width: 34px;
+}
+
+.footer-btn-area {
+  margin-top: 5.5rem;
+}
+
+.footer-btn {
+  color: black;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 10px;
+  border: 5px solid white;
+  background-color: rgba(217, 217, 217, 1);
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+/* END OF FOOTER */
+
+/* START OF LANDING LINKS */
+
+.landing-links {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.landing-links h1 {
+  font-size: 6.4rem;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(
+    270deg,
+    #4eebc0 0%,
+    #5733f5 61.96%,
+    #eb4ee6 76.92%
+  );
+  background-image: linear-gradient(
+    270deg,
+    #4eebc0 0%,
+    #5733f5 61.96%,
+    #eb4ee6 76.92%
+  );
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 75px;
+  margin-bottom: 6rem;
+  font-family: "Noto Sans Display", sans-serif;
+}
+
+.lnd-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+.lnd-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.lnd-link-icon {
+  height: 45px;
+  width: auto;
+}
+
+/* END OF LANDING LINKS */
+
+/* START OF CONTACT */
+
+.contact-area {
+  position: relative;
+  margin-top: 20rem;
+  margin-bottom: 20rem;
+}
+
+.contact-form-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.contact-form-header {
+  width: 75%;
+  margin: auto;
+}
+
+.contact-form {
+  width: 75%;
+  margin: auto;
+}
+
+.contact-form-header h1 {
+  text-transform: uppercase;
+  background: linear-gradient(
+    270deg,
+    #4eebc0 37%,
+    #5733f5 77.96%,
+    #eb4ee6 104.92%
+  );
+  background-image: linear-gradient(
+    270deg,
+    #4eebc0 37%,
+    #5733f5 77.96%,
+    #eb4ee6 104.92%
+  );
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Noto Sans Display", sans-serif;
+  font-size: 9.6rem;
+  letter-spacing: 6%;
+  line-height: 100px;
+}
+
+.contact-form-header h4 {
+  color: white;
+  margin-top: 6rem;
+  font-size: 3.2rem;
+  letter-spacing: -5%;
+  line-height: 48px;
+}
+
+.contact-form-header p {
+  margin-top: 2rem;
+  color: #6b6b6b;
+  line-height: 36px;
+  font-size: 2.4rem;
+}
+
+.form-item h4 {
+  font-family: "Noto Sans Display", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  line-height: 37.7px;
+  letter-spacing: -5%;
+  margin-bottom: 2.6rem;
+}
+
+.form-input {
+  width: 55%;
+  border-radius: 100px;
+  height: 4rem;
+  padding: 0.5rem 1.5rem;
+  color: black;
+  font-size: 1.8rem;
+  font-family: "Poppins";
+}
+
+form .form-item:not(:first-child) {
+  margin-top: 2.6rem;
+}
+
+.form-input-ta {
+  width: 55%;
+  border-radius: 33px;
+  height: 12rem;
+  padding: 0.5rem 1.5rem;
+  color: black;
+  font-size: 1.8rem;
+  font-family: "Poppins";
+  resize: vertical;
+}
+
+.form-input:focus-visible {
+  outline: #eb4ee6 solid 3px;
+}
+
+.form-input-ta:focus-visible {
+  outline: #eb4ee6 solid 3px;
+}
+/* END OF CONTACT */
