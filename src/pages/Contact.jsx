@@ -1,5 +1,6 @@
 import React from "react";
 import reblogo from "../images/REBLIUM.png";
+import { FaCheck } from "react-icons/fa";
 
 function Contact() {
   return (
@@ -10,21 +11,23 @@ function Contact() {
             <div className="header-black">
               <div className="nav-area">
                 <div className="nav-logo">
-                  <img src={reblogo} alt="reblium-logo" />
+                  <a href="/">
+                    <img src={reblogo} alt="reblium-logo" />
+                  </a>
                 </div>
                 <nav>
                   <ul className="nav-list">
                     <li className="nav-item">
-                      <a href="#">FOR CREATORS & BRANDS</a>
+                      <a href="/">FOR CREATORS & BRANDS</a>
                     </li>
                     <li className="nav-item">
-                      <a href="#">WE BELIEVE</a>
+                      <a href="/">WE BELIEVE</a>
                     </li>
                     <li className="nav-item">
                       <div className="nav-divider"></div>
                     </li>
                     <li className="nav-item gren">
-                      <a href="#">CONTACT US</a>
+                      <a href="/contact">CONTACT US</a>
                     </li>
                   </ul>
                 </nav>
@@ -48,23 +51,34 @@ function Contact() {
             <form>
               <div className="form-item">
                 <h4>Email Address *</h4>
-                <input type="email" name="" class="form-input" />
+                <input type="email" name="" className="form-input" />
               </div>
               <div className="form-item">
                 <h4>First Name *</h4>
-                <input type="text" name="" class="form-input" />
+                <input type="text" name="" className="form-input" />
               </div>
               <div className="form-item">
                 <h4>Last Name *</h4>
-                <input type="text" name="" class="form-input" />
+                <input type="text" name="" className="form-input" />
               </div>
               <div className="form-item">
                 <h4>Country *</h4>
-                <input type="text" name="" class="form-input" />
+                <input type="text" name="" className="form-input" />
               </div>
               <div className="form-item">
                 <h4>Tell US More About Your Inquiry *</h4>
-                <textarea class="form-input-ta"></textarea>
+                <textarea className="form-input-ta"></textarea>
+              </div>
+              <div className="form-item w-check">
+                <input
+                  type="checkbox"
+                  name=""
+                  className="checkbox form-checkbox rounded-checkbox"
+                />
+                <p>
+                  I want to receive helpful marketing communications from
+                  Reblium via email.
+                </p>
               </div>
             </form>
           </div>

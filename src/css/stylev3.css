@@ -869,4 +869,74 @@ form .form-item:not(:first-child) {
 .form-input-ta:focus-visible {
   outline: #eb4ee6 solid 3px;
 }
+
+.w-check {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.w-check p {
+  font-size: 2.4rem;
+  line-height: 36px;
+  color: white;
+  letter-spacing: -5%;
+}
+
+.checkbox:checked {
+  background: linear-gradient(
+    270deg,
+    #4eebc0 37%,
+    #5733f5 77.96%,
+    #eb4ee6 104.92%
+  );
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background: #f8f7f7;
+  border: 1px solid #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: url("../images/check2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.checkbox::before {
+  display: none;
+}
+
+.checkbox:checked::before {
+  display: block;
+}
+
+.check-icon {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.check-ar {
+  position: relative;
+}
 /* END OF CONTACT */

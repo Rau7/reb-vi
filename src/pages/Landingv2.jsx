@@ -21,6 +21,7 @@ import {
   FaYoutube,
   FaBars,
 } from "react-icons/fa";
+import { Scrollchor } from "react-scrollchor";
 
 function Landing() {
   /*  
@@ -54,21 +55,29 @@ function Landing() {
               <div className="header-black">
                 <div className="nav-area">
                   <div className="nav-logo">
-                    <img src={reblogo} alt="reblium-logo" />
+                    <Scrollchor to="" className="nav-link">
+                      <img src={reblogo} alt="reblium-logo" />
+                    </Scrollchor>
                   </div>
                   <nav>
                     <ul className="nav-list">
                       <li className="nav-item">
-                        <a href="#">FOR CREATORS & BRANDS</a>
+                        <Scrollchor to="creator" className="nav-link">
+                          FOR CREATORS & BRANDS
+                        </Scrollchor>
                       </li>
                       <li className="nav-item">
-                        <a href="#">WE BELIEVE</a>
+                        <Scrollchor to="webel" className="nav-link">
+                          WE BELIEVE
+                        </Scrollchor>
                       </li>
                       <li className="nav-item">
                         <div className="nav-divider"></div>
                       </li>
                       <li className="nav-item gren">
-                        <a href="#">CONTACT US</a>
+                        <a href="/contact" to="_blank">
+                          CONTACT US
+                        </a>
                       </li>
                     </ul>
                   </nav>
@@ -88,7 +97,7 @@ function Landing() {
               </p>
               <div className="hero-btn-area">
                 <div className="corp-btn">
-                  <a href="#" className="corp-link">
+                  <a href="/contact" to="_blank" className="corp-link">
                     <div className="corp-flex">
                       <h4>GET EARLY ACCESS</h4>
                     </div>
@@ -98,7 +107,7 @@ function Landing() {
             </div>
           </div>
         </section>
-        <section className="expand-area">
+        <section className="expand-area" id="creator">
           <div className="expand-container">
             <h1>Amplify. Expand.</h1>
             <h3 className="big-h3">
@@ -129,18 +138,33 @@ function Landing() {
                 </div>
                 <div className="lnd-item-wrt-area">
                   <h1>
-                    Create <br /> Your Avatar
+                    Customize <br /> Your Style
                   </h1>
                   <p>
-                    It all starts with your avatar. Fluidly blend between
-                    gender, ethnicity, age and fantasy!
+                    Explore different looks with our library of default fashion
+                    items and in-app purchases.
                   </p>
+                </div>
+              </div>
+              <div className="lnd-grid-item img-right">
+                <div className="lnd-item-wrt-area">
+                  <h1>
+                    Create <br /> Content
+                  </h1>
+                  <p>
+                    Combine poses, animations and backgrounds to create
+                    shareable and meme-able content on Instagram, Tiktok,
+                    Twitter and Snapchat.
+                  </p>
+                </div>
+                <div className="lnd-item-img-area">
+                  <img src={p3} alt="reblium-content-1" />
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section className="landing-message">
+        <section className="landing-message" id="webel">
           <div className="landing-m-container">
             <div className="landing-m-content">
               <h2>
@@ -236,7 +260,7 @@ function Landing() {
             </div>
             <div className="corp-btn-area">
               <div className="corp-btn">
-                <a href="#" className="corp-link">
+                <a href="/contact" to="_blank" className="corp-link">
                   <div className="corp-flex">
                     <h4>Contact Us</h4>
                   </div>
@@ -249,7 +273,9 @@ function Landing() {
       <footer>
         <div className="footer-container">
           <div className="footer-logo">
-            <img src={reblogowhite} alt="reblium-logo" />
+            <Scrollchor to="" className="nav-link">
+              <img src={reblogowhite} alt="reblium-logo" />
+            </Scrollchor>
           </div>
           <p>Anyone can become a virtual influencer</p>
           <div className="footer-links">
@@ -286,7 +312,7 @@ function Landing() {
           </div>
           <div className="footer-btn-area">
             <div className="corp-btn">
-              <a href="#" className="corp-link">
+              <a href="/contact" to="_blank" className="corp-link">
                 <div className="corp-flex">
                   <h4>GET EARLY ACCESS</h4>
                 </div>
