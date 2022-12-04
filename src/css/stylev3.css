@@ -153,6 +153,10 @@ img {
   height: 22px;
 }
 
+.nav-mob {
+  display: none;
+}
+
 .nav-area {
   padding-left: 15rem;
   padding-right: 15rem;

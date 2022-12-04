@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./css/stylev3.css";
-import "./css/mobilev3.css";
+import "./css/mobile.scss";
 import Landingv2 from "./pages/Landingv2";
 import Contact from "./pages/Contact";
 

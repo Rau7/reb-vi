@@ -22,6 +22,7 @@ import {
   FaBars,
 } from "react-icons/fa";
 import { Scrollchor } from "react-scrollchor";
+import ham from "../images/hamburger.svg";
 
 function Landing() {
   /*  
@@ -58,6 +59,11 @@ function Landing() {
                     <Scrollchor to="" className="nav-link">
                       <img src={reblogo} alt="reblium-logo" />
                     </Scrollchor>
+                  </div>
+                  <div className="nav-mob">
+                    <div className="nav-mob-ham">
+                      <img src={ham} alt="reb-ham" />
+                    </div>
                   </div>
                   <nav>
                     <ul className="nav-list">
@@ -113,7 +119,7 @@ function Landing() {
         </section>
         <section className="expand-area" id="creator">
           <div className="expand-container">
-            <h1>Amplify. Expand.</h1>
+            <h1>BE AUTHENTIC. BE YOURSELF.</h1>
             <h3 className="big-h3">
               BE WHOEVER <br /> YOU WANT TO BE
             </h3>
