@@ -602,9 +602,11 @@ img {
   text-align: left;
 }
 
-.lnd-item-img-area img {
-  width: auto;
+.lnd-item-img-area video {
+  width: 400px;
   height: 500px;
+  object-fit: cover;
+  border-radius: 1rem;
 }
 
 /* END OF LANDING GRID AREA */

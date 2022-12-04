@@ -9,9 +9,9 @@ import peep3 from "../images/bailey.webp";
 import peep4 from "../images/peep4.webp";
 import peep5 from "../images/peep5.webp";
 import reblogo from "../images/REBLIUM.png";
-import p1 from "../images/p1.png";
-import p2 from "../images/p2.png";
-import p3 from "../images/p3.png";
+import p1 from "../videos/p1.mp4";
+import p2 from "../videos/peep2.mp4";
+import p3 from "../videos/peep3.mp4";
 import {
   FaTwitter,
   FaTiktok,
@@ -139,12 +139,12 @@ function Landing() {
                   </p>
                 </div>
                 <div className="lnd-item-img-area">
-                  <img src={p1} alt="reblium-content-1" />
+                  <video src={p1} autoPlay={true} muted loop></video>
                 </div>
               </div>
               <div className="lnd-grid-item img-left">
                 <div className="lnd-item-img-area">
-                  <img src={p2} alt="reblium-content-1" />
+                  <video src={p2} autoPlay={true} muted loop></video>
                 </div>
                 <div className="lnd-item-wrt-area">
                   <h1>
@@ -168,7 +168,7 @@ function Landing() {
                   </p>
                 </div>
                 <div className="lnd-item-img-area">
-                  <img src={p3} alt="reblium-content-1" />
+                  <video src={p3} autoPlay={true} muted loop></video>
                 </div>
               </div>
             </div>

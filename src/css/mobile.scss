@@ -132,15 +132,9 @@ $xxl: 1400px;
           grid-template-columns: 1fr;
           align-items: center;
           .lnd-item-img-area {
-            height: 45rem;
-            width: 100%;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            background-image: url("../images/p1.png");
-            background-repeat: no-repeat;
-            img {
-              display: none;
+            video {
+              height: 45rem;
+              width: 100vw;
             }
           }
           .lnd-item-wrt-area {
@@ -244,7 +238,7 @@ $xxl: 1400px;
   }
 
   .lnd-info-list .lnd-info-item:not(:first-child) {
-    margin-top: 5rem;
+    margin-top: 8.5rem;
   }
 
   // LANDING INFO END
@@ -504,15 +498,9 @@ $xxl: 1400px;
           grid-template-columns: 1fr;
           align-items: center;
           .lnd-item-img-area {
-            height: 45rem;
-            width: 100%;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            background-image: url("../images/p1.png");
-            background-repeat: no-repeat;
-            img {
-              display: none;
+            video {
+              height: 45rem;
+              width: 100vw;
             }
           }
           .lnd-item-wrt-area {
@@ -560,7 +548,7 @@ $xxl: 1400px;
   }
 
   .lnd-grid-list .lnd-grid-item:not(:first-child) {
-    margin-top: 5rem;
+    margin-top: 8.5rem;
   }
 
   // GRID AREA END
