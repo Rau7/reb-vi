@@ -89,7 +89,11 @@ function Landing() {
             <video src={herovid} autoPlay={true} muted loop></video>
             <div className="hero-exp">
               <h1>
-                Create Your <br /> Alter Ego
+                Create
+                <br />
+                Your
+                <br />
+                Alter Ego
               </h1>
               <p>
                 Reblium helps creators make their alter ego <br /> to share
@@ -170,10 +174,6 @@ function Landing() {
               <h2>
                 COMMUNITY BUILDING: <br /> IT'S IN OUR DNA
               </h2>
-              <p>
-                We know how to help creators because we are creators.
-                <br /> Our Jellysmack Original channels are living proof.
-              </p>
             </div>
           </div>
         </section>

@@ -11,7 +11,7 @@ function Contact() {
             <div className="header-black">
               <div className="nav-area">
                 <div className="nav-logo">
-                  <a href="/">
+                  <a href="/contact">
                     <img src={reblogo} alt="reblium-logo" />
                   </a>
                 </div>

@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "DMSansBold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("DMSansBold"), url(../fonts/bold.woff) format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -33,26 +41,26 @@ img {
 
 .hero-exp {
   position: absolute;
-  top: 55%;
-  left: 34%;
+  top: 65%;
+  left: 33%;
   transform: translate(-50%, -50%);
 }
 
 .hero-exp h1 {
   margin-top: 2.5rem;
   color: black;
-  font-size: 9.6rem;
-  margin-bottom: 4rem;
+  font-size: 6rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
-  line-height: 100px;
-  font-family: "Noto Sans Display", sans-serif;
+  line-height: 70px;
+  font-family: "DMSansBold", sans-serif;
   letter-spacing: 6%;
 }
 
 .hero-exp p {
   color: black;
-  font-size: 3.2rem;
-  line-height: 48px;
+  font-size: 2.4rem;
+  line-height: 38px;
 }
 
 .hero-btn-area {
@@ -64,7 +72,7 @@ img {
 .header {
   position: fixed;
   top: 5rem;
-  height: 68px;
+  height: 60px;
   width: 100%;
   z-index: 99;
 }
@@ -73,7 +81,7 @@ img {
   height: 100%;
   width: 85%;
   margin: auto;
-  border: double 6px transparent;
+  border: solid 3px transparent;
   border-radius: 40px;
   background-image: linear-gradient(white, white),
     linear-gradient(
@@ -134,8 +142,8 @@ img {
 } */
 
 .nav-logo img {
-  width: 185px;
-  height: 28px;
+  width: auto;
+  height: 22px;
 }
 
 .nav-area {
@@ -159,8 +167,8 @@ img {
   text-decoration: none;
   color: white;
   font-weight: 800;
-  font-size: 1.6rem;
-  font-family: "Noto Sans Display", sans-serif;
+  font-size: 1.4rem;
+  font-family: "DMSansBold", sans-serif;
 }
 
 .gren a {
@@ -194,11 +202,10 @@ img {
 }
 
 .landing-m-content h2 {
-  font-size: 5.4rem;
+  font-size: 4.8rem;
   text-align: center;
-  margin-bottom: 2.4rem;
   line-height: 65px;
-  font-family: "Noto Sans Display", sans-serif;
+  font-family: "DMSansBold", sans-serif;
 }
 
 .landing-m-content p {
@@ -223,15 +230,15 @@ img {
 }
 
 .corp-header h1 {
-  font-size: 6.4rem;
+  font-size: 4.8rem;
   text-align: center;
   line-height: 70px;
-  font-family: "Noto Sans Display", sans-serif;
+  font-family: "DMSansBold", sans-serif;
 }
 
 .corp-header p {
   margin-top: 5rem;
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   text-align: center;
   line-height: 35px;
 }
@@ -461,7 +468,7 @@ img {
   color: white;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Noto Sans Display", sans-serif;
+  font-family: "DMSansBold", sans-serif;
 }
 
 .expand-container p {
@@ -471,7 +478,7 @@ img {
 }
 
 .big-h3 {
-  font-size: 9.6rem;
+  font-size: 7.5rem;
   text-align: center;
   text-transform: uppercase;
   background: linear-gradient(
@@ -499,7 +506,7 @@ img {
   margin-top: 5rem;
   margin-bottom: 3rem;
   line-height: 100px;
-  font-family: "Noto Sans Display", sans-serif;
+  font-family: "DMSansBold", sans-serif;
 }
 /* END OF EXPAND AREA */
 
@@ -513,8 +520,8 @@ img {
 }
 
 .lnd-item-wrt-area h1 {
-  font-size: 6.4rem;
-  line-height: 75px;
+  font-size: 4.8rem;
+  line-height: 55px;
   text-align: left;
   text-transform: uppercase;
   background: linear-gradient(
@@ -539,19 +546,19 @@ img {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "Noto Sans Display", sans-serif;
+  font-family: "DMSansBold", sans-serif;
 }
 
 .lnd-item-wrt-area p {
   margin-top: 1rem;
   color: white;
-  font-size: 3.2rem;
-  line-height: 48px;
+  font-size: 1.9rem;
+  line-height: 40px;
 }
 
 .landing-grid-area {
   width: 100%;
-  margin-top: 10rem;
+  margin-top: 2.5rem;
   display: flex;
   justify-content: center;
   margin-bottom: 10rem;
@@ -562,7 +569,7 @@ img {
 }
 
 .landing-grid-container {
-  max-width: 1095px;
+  max-width: 900px;
   width: 65%;
 }
 
@@ -585,8 +592,8 @@ img {
 }
 
 .lnd-item-img-area img {
-  width: 412.5px;
-  height: 600px;
+  width: auto;
+  height: 500px;
 }
 
 /* END OF LANDING GRID AREA */
@@ -613,15 +620,15 @@ img {
 }
 
 .lnd-info-item h2 {
-  font-size: 3.2rem;
+  font-size: 2.6rem;
   font-weight: 700;
   line-height: 40px;
   text-transform: uppercase;
-  font-family: "Noto Sans Display", sans-serif;
+  font-family: "DMSansBold", sans-serif;
 }
 
 .lnd-info-item p {
-  font-size: 3.2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: 40px;
 }
@@ -734,7 +741,7 @@ footer {
   -webkit-text-fill-color: transparent;
   line-height: 75px;
   margin-bottom: 6rem;
-  font-family: "Noto Sans Display", sans-serif;
+  font-family: "DMSansBold", sans-serif;
 }
 
 .lnd-links {
@@ -806,35 +813,35 @@ footer {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "Noto Sans Display", sans-serif;
-  font-size: 9.6rem;
+  font-family: "DMSansBold", sans-serif;
+  font-size: 6rem;
   letter-spacing: 6%;
-  line-height: 100px;
+  line-height: 70px;
 }
 
 .contact-form-header h4 {
   color: white;
-  margin-top: 6rem;
-  font-size: 3.2rem;
+  margin-top: 3rem;
+  font-size: 2.2rem;
   letter-spacing: -5%;
-  line-height: 48px;
+  line-height: 30px;
 }
 
 .contact-form-header p {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   color: #6b6b6b;
-  line-height: 36px;
-  font-size: 2.4rem;
+  line-height: 20px;
+  font-size: 1.8rem;
 }
 
 .form-item h4 {
-  font-family: "Noto Sans Display", sans-serif;
+  font-family: "DMSansBold", sans-serif;
   color: white;
   text-transform: uppercase;
-  font-size: 2.4rem;
-  line-height: 37.7px;
+  font-size: 1.8rem;
+  line-height: 20px;
   letter-spacing: -5%;
-  margin-bottom: 2.6rem;
+  margin-bottom: 1rem;
 }
 
 .form-input {
@@ -843,12 +850,12 @@ footer {
   height: 4rem;
   padding: 0.5rem 1.5rem;
   color: black;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: "Poppins";
 }
 
 form .form-item:not(:first-child) {
-  margin-top: 2.6rem;
+  margin-top: 3rem;
 }
 
 .form-input-ta {
@@ -857,7 +864,7 @@ form .form-item:not(:first-child) {
   height: 12rem;
   padding: 0.5rem 1.5rem;
   color: black;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: "Poppins";
   resize: vertical;
 }
