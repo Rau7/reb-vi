@@ -49,6 +49,11 @@ function Landing() {
 */
   return (
     <>
+      <div className="loading-area">
+        <div className="loading-content">
+          <img src={reblogo} alt="reblium-logo" />
+        </div>
+      </div>
       <main>
         <section className="hero">
           <div className="header">

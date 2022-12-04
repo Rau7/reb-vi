@@ -36,6 +36,13 @@ $xxl: 1400px;
 }
 
 @media (max-width: $sm) {
+  .loading-content img {
+    width: auto;
+    height: 3rem;
+    animation: scaler 1s linear forwards;
+    animation-iteration-count: 1;
+  }
+
   /* START OF HERO SECTION */
 
   .hero-container {
@@ -402,6 +409,12 @@ $xxl: 1400px;
 }
 
 @media (min-width: $sm) and (max-width: $md) {
+  .loading-content img {
+    width: auto;
+    height: 4rem;
+    animation: scaler 1s linear forwards;
+    animation-iteration-count: 1;
+  }
   /* START OF HERO SECTION */
 
   .hero-container {
@@ -769,7 +782,12 @@ $xxl: 1400px;
 
 @media (min-width: $md) and (max-width: $lg) {
   /* START OF HERO SECTION */
-
+  .loading-content img {
+    width: auto;
+    height: 5rem;
+    animation: scaler 1s linear forwards;
+    animation-iteration-count: 1;
+  }
   .hero-container {
     .hero-exp {
       position: absolute;
