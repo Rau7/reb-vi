@@ -80,6 +80,9 @@ function Contact() {
                   Reblium via email.
                 </p>
               </div>
+              <div className="form-btn-area">
+                <button className="form-btn">Submit</button>
+              </div>
             </form>
           </div>
         </div>

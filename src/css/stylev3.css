@@ -2,10 +2,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@400;500;600;700&display=swap");
 
 @font-face {
-  font-family: "DMSansBold";
+  font-family: "ResistSansBold";
+  font-style: normal;
+  font-weight: bold;
+  src: local("ResistSansBold"), url(../fonts/bold.woff) format("truetype");
+}
+
+@font-face {
+  font-family: "ResistSansRegular";
   font-style: normal;
   font-weight: normal;
-  src: local("DMSansBold"), url(../fonts/bold.woff) format("truetype");
+  src: local("ResistSansRegular"), url(../fonts/regular.woff) format("truetype");
 }
 
 * {
@@ -53,7 +60,7 @@ img {
   margin-bottom: 2rem;
   text-transform: uppercase;
   line-height: 70px;
-  font-family: "DMSansBold", sans-serif;
+  font-family: "ResistSansBold", sans-serif;
   letter-spacing: 6%;
 }
 
@@ -168,7 +175,7 @@ img {
   color: white;
   font-weight: 800;
   font-size: 1.4rem;
-  font-family: "DMSansBold", sans-serif;
+  font-family: "ResistSansBold", sans-serif;
 }
 
 .gren a {
@@ -205,7 +212,7 @@ img {
   font-size: 4.8rem;
   text-align: center;
   line-height: 65px;
-  font-family: "DMSansBold", sans-serif;
+  font-family: "ResistSansBold", sans-serif;
 }
 
 .landing-m-content p {
@@ -233,7 +240,7 @@ img {
   font-size: 4.8rem;
   text-align: center;
   line-height: 70px;
-  font-family: "DMSansBold", sans-serif;
+  font-family: "ResistSansBold", sans-serif;
 }
 
 .corp-header p {
@@ -468,7 +475,7 @@ img {
   color: white;
   text-align: center;
   text-transform: uppercase;
-  font-family: "DMSansBold", sans-serif;
+  font-family: "ResistSansBold", sans-serif;
 }
 
 .expand-container p {
@@ -506,7 +513,7 @@ img {
   margin-top: 5rem;
   margin-bottom: 3rem;
   line-height: 100px;
-  font-family: "DMSansBold", sans-serif;
+  font-family: "ResistSansBold", sans-serif;
 }
 /* END OF EXPAND AREA */
 
@@ -546,7 +553,7 @@ img {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "DMSansBold", sans-serif;
+  font-family: "ResistSansBold", sans-serif;
 }
 
 .lnd-item-wrt-area p {
@@ -624,7 +631,7 @@ img {
   font-weight: 700;
   line-height: 40px;
   text-transform: uppercase;
-  font-family: "DMSansBold", sans-serif;
+  font-family: "ResistSansBold", sans-serif;
 }
 
 .lnd-info-item p {
@@ -741,7 +748,7 @@ footer {
   -webkit-text-fill-color: transparent;
   line-height: 75px;
   margin-bottom: 6rem;
-  font-family: "DMSansBold", sans-serif;
+  font-family: "ResistSansBold", sans-serif;
 }
 
 .lnd-links {
@@ -813,7 +820,7 @@ footer {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "DMSansBold", sans-serif;
+  font-family: "ResistSansBold", sans-serif;
   font-size: 6rem;
   letter-spacing: 6%;
   line-height: 70px;
@@ -835,7 +842,7 @@ footer {
 }
 
 .form-item h4 {
-  font-family: "DMSansBold", sans-serif;
+  font-family: "ResistSansBold", sans-serif;
   color: white;
   text-transform: uppercase;
   font-size: 1.8rem;
@@ -880,12 +887,12 @@ form .form-item:not(:first-child) {
 .w-check {
   display: flex;
   align-items: center;
-  gap: 3.5rem;
+  gap: 1.5rem;
 }
 
 .w-check p {
-  font-size: 2.4rem;
-  line-height: 36px;
+  font-size: 1.8rem;
+  line-height: 20px;
   color: white;
   letter-spacing: -5%;
 }
@@ -902,13 +909,13 @@ form .form-item:not(:first-child) {
 .checkbox {
   -webkit-appearance: none;
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
   border-radius: 5px;
   background: #f8f7f7;
   border: 1px solid #fff;
   cursor: pointer;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .checkbox::before {
@@ -935,8 +942,8 @@ form .form-item:not(:first-child) {
 
 .check-icon {
   position: absolute;
-  height: 20px;
-  width: 20px;
+  height: 10px;
+  width: 10px;
   color: black;
   top: 50%;
   left: 50%;
@@ -947,3 +954,24 @@ form .form-item:not(:first-child) {
   position: relative;
 }
 /* END OF CONTACT */
+
+/* CONTACT BUTTON */
+
+.form-btn {
+  background: linear-gradient(
+    270deg,
+    #4eebc0 37%,
+    #5733f5 77.96%,
+    #eb4ee6 104.92%
+  );
+  height: 5.5rem;
+  width: 15rem;
+  border-radius: 3rem;
+  font-family: "ResistSansRegular", sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 5rem;
+}
+
+/* END OF CONTACT BUTTON */
