@@ -187,7 +187,7 @@ function Landing() {
                   <video src={p1} autoPlay={true} muted loop></video>
                 </div>
               </div>
-              <div className="lnd-grid-item img-left box">
+              <div className="lnd-grid-item img-left">
                 <div className="lnd-item-img-area">
                   <video src={p2} autoPlay={true} muted loop></video>
                 </div>
@@ -201,7 +201,7 @@ function Landing() {
                   </p>
                 </div>
               </div>
-              <div className="lnd-grid-item img-right box">
+              <div className="lnd-grid-item img-right">
                 <div className="lnd-item-wrt-area">
                   <h1>
                     Create <br /> Content
@@ -259,7 +259,9 @@ function Landing() {
             </div>
           </div>
         </section>
-        <section className="landing-linksx">
+        {/*
+        
+          <section className="landing-linksx">
           <div className="landing-links-container">
             <div className="landing-links">
               <Phrase
@@ -326,6 +328,10 @@ function Landing() {
             </div>
           </div>
         </section>
+        
+        
+        */}
+
         <section className="corporate">
           <div className="corp-container">
             <div className="corp-header">

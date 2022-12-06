@@ -531,12 +531,12 @@ img {
 }
 
 .box {
-  transform: translateX(200vw);
+  transform: translateX(-200vw);
   transition: transform 0.5s linear;
 }
 
 .box:nth-of-type(even) {
-  transform: translateX(-200vw);
+  transform: translateX(200vw);
 }
 
 .box.show {
