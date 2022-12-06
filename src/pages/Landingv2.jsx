@@ -259,40 +259,11 @@ function Landing() {
             </div>
           </div>
         </section>
-        {/*
-        
-          <section className="landing-linksx">
+
+        <section className="landing-linksx">
           <div className="landing-links-container">
             <div className="landing-links">
-              <Phrase
-                className="jrp"
-                margin={5}
-                size={30}
-                cubicBezier={[0.68, 0.04, 0.45, 0.98]}
-                color="#ffffff"
-                duration={2}
-                delay={textDel}
-                font="ResistSansRegular"
-              >
-                <Char char="J" />
-                <Char char="O" />
-                <Char char="I" />
-                <Char char="N" />
-                <Char char="I" color="#000000" />
-                <Char char="T" />
-                <Char char="H" />
-                <Char char="E" />
-                <Char char="I" color="#000000" />
-                <Char char="R" />
-                <Char char="E" />
-                <Char char="B" />
-                <Char char="E" />
-                <Char char="L" />
-                <Char char="L" />
-                <Char char="I" />
-                <Char char="O" />
-                <Char char="N" />
-              </Phrase>
+              <h1>Join The Rebellion</h1>
               <div className="lnd-links">
                 <div className="lnd-item">
                   <a href="#">
@@ -328,9 +299,6 @@ function Landing() {
             </div>
           </div>
         </section>
-        
-        
-        */}
 
         <section className="corporate">
           <div className="corp-container">
