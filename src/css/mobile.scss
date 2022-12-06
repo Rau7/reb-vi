@@ -251,12 +251,18 @@ $xxl: 1400px;
   // LANDING INFO END
 
   //LANDING LINKS START
-  .landing-links {
+  .landing-linksx {
     margin-top: 5rem;
     margin-bottom: 5rem;
     .landing-links-container {
       padding: 0 2rem;
       .landing-links {
+        justify-content: start;
+        align-items: flex-start;
+        svg {
+          width: 2rem;
+          height: 2rem;
+        }
         h1 {
           font-size: 3.6rem;
           text-align: left;
@@ -623,12 +629,18 @@ $xxl: 1400px;
   // LANDING INFO END
 
   //LANDING LINKS START
-  .landing-links {
+  .landing-linksx {
     margin-top: 5rem;
     margin-bottom: 5rem;
     .landing-links-container {
       padding: 0 2rem;
       .landing-links {
+        justify-content: start;
+        align-items: flex-start;
+        svg {
+          width: 2rem;
+          height: 2rem;
+        }
         h1 {
           font-size: 4.2rem;
           text-align: left;
@@ -989,12 +1001,18 @@ $xxl: 1400px;
   // LANDING INFO END
 
   //LANDING LINKS START
-  .landing-links {
+  .landing-linksx {
     margin-top: 5rem;
     margin-bottom: 5rem;
     .landing-links-container {
       padding: 0 2rem;
       .landing-links {
+        justify-content: start;
+        align-items: flex-start;
+        svg {
+          width: 2rem;
+          height: 2rem;
+        }
         h1 {
           font-size: 5.4rem;
           text-align: center;

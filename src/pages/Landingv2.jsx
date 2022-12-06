@@ -2,12 +2,6 @@ import React from "react";
 import herovid from "../videos/herovidv4.mp4";
 import reblogowhite from "../images/REBLIUM.png";
 import { useEffect, useState } from "react";
-import { FaRocket } from "react-icons/fa";
-import peep1 from "../images/peep1.webp";
-import peep2 from "../images/peep2.webp";
-import peep3 from "../images/bailey.webp";
-import peep4 from "../images/peep4.webp";
-import peep5 from "../images/peep5.webp";
 import reblogo from "../images/REBLIUM.png";
 import p1 from "../videos/p1.mp4";
 import p2 from "../videos/peep2.mp4";
@@ -23,30 +17,76 @@ import {
 } from "react-icons/fa";
 import { Scrollchor } from "react-scrollchor";
 import ham from "../images/hamburger.svg";
+import { Char, Phrase } from "animatedtxt";
 
 function Landing() {
-  /*  
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    if (position >= 45) {
-      const header = document.querySelector(".header");
-      header.style.setProperty("top", "3rem");
-    } else if (position < 45) {
-      const header = document.querySelector(".header");
-      header.style.setProperty("top", "10rem");
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+  const [textDel, setTextDel] = useState(999999999);
+  const [heightTop, setHeightTop] = useState(
+    document.documentElement.scrollTop
+  );
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
+  const updateText = () => {
+    setHeightTop(document.documentElement.scrollTop);
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", updateText);
+    return () => window.removeEventListener("scroll", updateText);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleBoxes);
+    window.addEventListener("scroll", handleBigText);
+    handleBoxes();
+    handleBigText(width, height, heightTop);
+  });
+
+  function handleBoxes() {
+    const boxes = document.querySelectorAll(".box");
+
+    boxes.forEach((box) => {
+      const triggerPoint = (window.innerHeight / 5) * 4;
+      const boxTop = box.getBoundingClientRect().top - 225;
+
+      if (boxTop < triggerPoint) {
+        //alert(`${triggerPoint} , ${boxTop} ilk trigger`);
+        box.classList.add("show");
+      } else {
+        box.classList.remove("show");
+      }
+    });
+  }
+
+  const handleBigText = (width, height, top) => {
+    console.log(top);
+    if (top > 3200) {
+      setTextDel(1);
+    } else {
+      setTextDel(999999999);
+    }
+    const h3 = document.querySelector(".big-h3");
+    if (768 > width) {
+      h3.style.transform = "scale(" + 1 + ")";
+    }
+    if (width > 768) {
+      var mass = Math.min(1.5, 1 + 0.005 * top);
+
+      mass = 1 + (0.005 * top) / 2 - 0.55;
+      if (mass <= 1.54) {
+        h3.style.transform = "scale(" + mass + ")";
+      }
     }
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-*/
   return (
     <>
       <div className="loading-area">
@@ -133,7 +173,7 @@ function Landing() {
         <section className="landing-grid-area">
           <div className="landing-grid-container">
             <div className="lnd-grid-list">
-              <div className="lnd-grid-item img-right">
+              <div className="lnd-grid-item img-right box">
                 <div className="lnd-item-wrt-area">
                   <h1>
                     Create <br /> Your Avatar
@@ -147,7 +187,7 @@ function Landing() {
                   <video src={p1} autoPlay={true} muted loop></video>
                 </div>
               </div>
-              <div className="lnd-grid-item img-left">
+              <div className="lnd-grid-item img-left box">
                 <div className="lnd-item-img-area">
                   <video src={p2} autoPlay={true} muted loop></video>
                 </div>
@@ -161,7 +201,7 @@ function Landing() {
                   </p>
                 </div>
               </div>
-              <div className="lnd-grid-item img-right">
+              <div className="lnd-grid-item img-right box">
                 <div className="lnd-item-wrt-area">
                   <h1>
                     Create <br /> Content
@@ -219,10 +259,38 @@ function Landing() {
             </div>
           </div>
         </section>
-        <section className="landing-links">
+        <section className="landing-linksx">
           <div className="landing-links-container">
             <div className="landing-links">
-              <h1>Join the Rebellion</h1>
+              <Phrase
+                className="jrp"
+                margin={5}
+                size={30}
+                cubicBezier={[0.68, 0.04, 0.45, 0.98]}
+                color="#ffffff"
+                duration={2}
+                delay={textDel}
+                font="ResistSansRegular"
+              >
+                <Char char="J" />
+                <Char char="O" />
+                <Char char="I" />
+                <Char char="N" />
+                <Char char="I" color="#000000" />
+                <Char char="T" />
+                <Char char="H" />
+                <Char char="E" />
+                <Char char="I" color="#000000" />
+                <Char char="R" />
+                <Char char="E" />
+                <Char char="B" />
+                <Char char="E" />
+                <Char char="L" />
+                <Char char="L" />
+                <Char char="I" />
+                <Char char="O" />
+                <Char char="N" />
+              </Phrase>
               <div className="lnd-links">
                 <div className="lnd-item">
                   <a href="#">
