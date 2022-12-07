@@ -5,6 +5,66 @@ $xl: 1200px;
 $xxl: 1400px;
 
 @media (max-width: $sm) {
+  .contact-area {
+    margin-top: 15rem;
+    margin-bottom: 10rem;
+
+    .contact-form-header {
+      h1 {
+        font-size: 3.4rem;
+        line-height: 3.8rem;
+      }
+      h4 {
+        font-size: 1.7rem;
+        line-height: 2rem;
+      }
+      p {
+        font-size: 1.4rem;
+      }
+    }
+
+    .contact-form {
+      .form-item {
+        h4 {
+          font-size: 1.6rem;
+        }
+        .form-input {
+          font-size: 1.4rem;
+          height: 3rem;
+        }
+        p {
+          font-size: 1.5rem;
+        }
+      }
+      .form-sbmt {
+        margin-top: 2rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        height: 4rem;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .contact-form,
+  .contact-form-header {
+    width: 100%;
+    margin: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .form-input {
+    width: 100%;
+    height: 3.25rem;
+    font-size: 1.4rem;
+  }
+
+  .form-input-ta {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+
   .header-container {
     width: 93%;
   }
@@ -54,7 +114,13 @@ $xxl: 1400px;
         .nav-divider-mob {
           width: 100%;
           height: 1px;
-          background-color: #4eebc0;
+          background-image: linear-gradient(
+            270deg,
+            #4eebc0 0,
+            #5733f5 48.96%,
+            #5733f5 73.96%,
+            #eb4ee6 97.92%
+          );
         }
       }
     }

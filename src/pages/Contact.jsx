@@ -1,8 +1,17 @@
 import React from "react";
 import reblogo from "../images/REBLIUM.png";
 import { FaCheck } from "react-icons/fa";
+import checked from "../images/checked.svg";
+import unchecked from "../images/unchecked.svg";
+import { useState } from "react";
 
 function Contact() {
+  let [isChecked, setChecked] = useState(false);
+
+  const onSetCheck = () => {
+    let tmpChecked = isChecked;
+    setChecked(!tmpChecked);
+  };
   return (
     <>
       <div className="loading-area">
@@ -17,7 +26,7 @@ function Contact() {
               <div className="header-black">
                 <div className="nav-area">
                   <div className="nav-logo">
-                    <a href="/contact">
+                    <a href="/">
                       <img src={reblogo} alt="reblium-logo" />
                     </a>
                   </div>
@@ -73,14 +82,15 @@ function Contact() {
                   <input type="text" name="" className="form-input" />
                 </div>
                 <div className="form-item">
-                  <h4>Tell US More About Your Inquiry *</h4>
+                  <h4>Tell US More About Your Inquiry</h4>
                   <textarea className="form-input-ta"></textarea>
                 </div>
                 <div className="form-item w-check">
-                  <input
-                    type="checkbox"
-                    name=""
-                    className="checkbox form-checkbox rounded-checkbox"
+                  <img
+                    className="checkbox-image"
+                    src={isChecked ? checked : unchecked}
+                    alt="checkbox"
+                    onClick={() => onSetCheck()}
                   />
                   <p>
                     I want to receive helpful marketing communications from
@@ -88,7 +98,7 @@ function Contact() {
                   </p>
                 </div>
                 <div className="form-btn-area">
-                  <button className="form-btn">Submit</button>
+                  <button className="form-sbmt footer-btn">Submit</button>
                 </div>
               </form>
             </div>
