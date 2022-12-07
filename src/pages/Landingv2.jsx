@@ -108,6 +108,10 @@ function Landing() {
     }
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className="loading-area">
@@ -314,39 +318,41 @@ function Landing() {
             </div>
           </div>
         </section>
-
         <section className="landing-linksx">
           <div className="landing-links-container">
             <div className="landing-links">
               <h1 className="mover">Join The Rebellion</h1>
               <div className="lnd-links">
                 <div className="lnd-item">
-                  <a href="#">
+                  <a href="https://twitter.com/Reblium" target="_blank">
                     <FaTwitter className="lnd-link-icon" />
                   </a>
                 </div>
                 <div className="lnd-item">
-                  <a href="#">
+                  <a href="https://www.tiktok.com/@reblium" target="_blank">
                     <FaTiktok className="lnd-link-icon" />
                   </a>
                 </div>
                 <div className="lnd-item">
-                  <a href="#">
+                  <a href="https://www.instagram.com/reblium/" target="_blank">
                     <FaInstagram className="lnd-link-icon" />
                   </a>
                 </div>
                 <div className="lnd-item">
-                  <a href="#">
+                  <a href="https://discord.gg/6CJjYJF6TJ" target="_blank">
                     <FaDiscord className="lnd-link-icon" />
                   </a>
                 </div>
                 <div className="lnd-item">
-                  <a href="#">
+                  <a
+                    href="https://www.linkedin.com/company/reblium/"
+                    target="_blank"
+                  >
                     <FaLinkedin className="lnd-link-icon" />
                   </a>
                 </div>
                 <div className="lnd-item">
-                  <a href="#">
+                  <a href="#" target="_blank">
                     <FaYoutube className="lnd-link-icon" />
                   </a>
                 </div>
@@ -354,7 +360,6 @@ function Landing() {
             </div>
           </div>
         </section>
-
         <section className="corporate">
           <div className="corp-container">
             <div className="corp-header">
@@ -419,13 +424,9 @@ function Landing() {
             </div>
           </div>
           <div className="footer-btn-area">
-            <div className="corp-btn">
-              <a href="/contact" to="_blank" className="corp-link">
-                <div className="corp-flex">
-                  <h4>GET EARLY ACCESS</h4>
-                </div>
-              </a>
-            </div>
+            <a href="/contact" className="footer-btn">
+              Get Early Access
+            </a>
           </div>
         </div>
       </footer>
