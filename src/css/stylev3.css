@@ -153,6 +153,10 @@ img {
   height: 22px;
 }
 
+.navbar-mob {
+  display: none;
+}
+
 .nav-mob {
   display: none;
 }
@@ -180,10 +184,19 @@ img {
   font-weight: 800;
   font-size: 1.4rem;
   font-family: "ResistSansBold", sans-serif;
+  transition: 0.4s all;
+}
+
+.nav-item a:hover {
+  color: #cccccc;
 }
 
 .gren a {
   color: #4eebc0;
+}
+
+.gren a:hover {
+  color: #37a586;
 }
 
 .nav-divider {
@@ -217,6 +230,7 @@ img {
   text-align: center;
   line-height: 65px;
   font-family: "ResistSansBold", sans-serif;
+  text-transform: uppercase;
 }
 
 .landing-m-content p {
@@ -302,42 +316,6 @@ img {
   margin-bottom: 10rem;
 }
 
-.corp-btn-area {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 5rem;
-}
-
-.corp-btn {
-  width: 300px;
-  height: 100%;
-  border: double 3px transparent;
-  border-radius: 30px;
-  background-color: black;
-}
-
-.corp-link {
-  display: block;
-  background-color: black;
-  color: white;
-  border-radius: 30px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.corp-link-ico {
-  color: white;
-  font-size: 16px;
-}
-
-.corp-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-}
-
 .corp-link h4 {
   color: white;
   font-size: 16px;
@@ -366,6 +344,60 @@ img {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.corp-btn-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.corp-btn {
+  width: 300px;
+  height: 100%;
+  border: double 3px transparent;
+  border-radius: 30px;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.corp-btn:hover {
+  background-color: transparent;
+  background-color: white;
+}
+
+.corp-btn:hover .corp-link h4 {
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.corp-btn:hover .corp-link {
+  color: white;
+}
+
+.corp-link {
+  display: block;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.corp-link-ico {
+  color: white;
+  font-size: 16px;
+}
+
+.corp-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
 /* END OF CORP */
 
 /* START OF STATS */
@@ -530,16 +562,16 @@ img {
   align-items: center;
 }
 
-.box {
+.box .lnd-item-wrt-area {
   transform: translateX(-200vw);
-  transition: transform 0.5s linear;
+  transition: transform 0.75s linear;
 }
 
-.box:nth-of-type(even) {
+.box:nth-of-type(even) .lnd-item-wrt-area {
   transform: translateX(200vw);
 }
 
-.box.show {
+.box.show .lnd-item-wrt-area {
   transform: translateX(0%);
 }
 
@@ -735,8 +767,8 @@ footer {
 /* START OF LANDING LINKS */
 
 .landing-linksx {
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .landing-links {
@@ -744,7 +776,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+  gap: 2rem;
 }
 
 .landing-links svg {
@@ -753,7 +785,16 @@ footer {
 }
 
 .landing-links h1 {
-  font-size: 6.4rem;
+  transform: translateX(-200vw);
+  transition: transform 0.75s linear;
+}
+
+.landing-links h1.show {
+  transform: translateX(0%);
+}
+
+.landing-links h1 {
+  font-size: 4.8rem;
   text-align: center;
   text-transform: uppercase;
   background: linear-gradient(
@@ -779,7 +820,7 @@ footer {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 75px;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   font-family: "ResistSansBold", sans-serif;
 }
 
@@ -1017,7 +1058,7 @@ form .form-item:not(:first-child) {
   height: 100vh;
   background-color: black;
   z-index: 20;
-  animation: slide 1.7s ease 1.7s forwards;
+  animation: slide 2s ease 2s forwards;
   animation-iteration-count: 1;
 }
 
@@ -1032,7 +1073,7 @@ form .form-item:not(:first-child) {
 .loading-content img {
   width: auto;
   height: 5rem;
-  animation: scaler 1.3s linear forwards;
+  animation: scaler 1.8s linear forwards;
   animation-iteration-count: 1;
 }
 
@@ -1076,3 +1117,40 @@ form .form-item:not(:first-child) {
 */
 
 /* END OF LOADING */
+
+/* NAV MOB */
+.nav-mob-con {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  border: solid 3px transparent;
+  border-radius: 40px;
+  background-image: linear-gradient(black, black),
+    linear-gradient(
+      270deg,
+      #4eebc0 0,
+      #5733f5 48.96%,
+      #5733f5 73.96%,
+      #eb4ee6 97.92%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-color: red;
+  position: relative;
+}
+
+.nav-mob-black {
+  display: block;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  border-radius: 40px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* END OF NAV MOB */

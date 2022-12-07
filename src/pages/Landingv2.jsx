@@ -2,7 +2,7 @@ import React from "react";
 import herovid from "../videos/herovidv4.mp4";
 import reblogowhite from "../images/REBLIUM.png";
 import { useEffect, useState } from "react";
-import reblogo from "../images/REBLIUM.png";
+import reblogo from "../images/rebs.svg";
 import p1 from "../videos/p1.mp4";
 import p2 from "../videos/peep2.mp4";
 import p3 from "../videos/peep3.mp4";
@@ -52,6 +52,7 @@ function Landing() {
 
   function handleBoxes() {
     const boxes = document.querySelectorAll(".box");
+    const join = document.querySelectorAll(".mover");
 
     boxes.forEach((box) => {
       const triggerPoint = (window.innerHeight / 5) * 4;
@@ -64,10 +65,21 @@ function Landing() {
         box.classList.remove("show");
       }
     });
+
+    join.forEach((joinx) => {
+      const triggerPoint = (window.innerHeight / 5) * 4;
+      const joinTop = joinx.getBoundingClientRect().top - 225;
+
+      if (joinTop < triggerPoint) {
+        //alert(`${triggerPoint} , ${boxTop} ilk trigger`);
+        joinx.classList.add("show");
+      } else {
+        joinx.classList.remove("show");
+      }
+    });
   }
 
   const handleBigText = (width, height, top) => {
-    console.log(top);
     if (top > 3200) {
       setTextDel(1);
     } else {
@@ -84,6 +96,15 @@ function Landing() {
       if (mass <= 1.54) {
         h3.style.transform = "scale(" + mass + ")";
       }
+    }
+  };
+
+  const openCloseNav = () => {
+    var x = document.querySelector(".navbar-mob");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
     }
   };
 
@@ -106,8 +127,14 @@ function Landing() {
                     </Scrollchor>
                   </div>
                   <div className="nav-mob">
-                    <div className="nav-mob-ham">
-                      <img src={ham} alt="reb-ham" />
+                    <div className="nav-mob-nav">
+                      <div className="nav-mob-ham">
+                        <img
+                          src={ham}
+                          alt="reb-ham"
+                          onClick={() => openCloseNav()}
+                        />
+                      </div>
                     </div>
                   </div>
                   <nav>
@@ -132,6 +159,34 @@ function Landing() {
                       </li>
                     </ul>
                   </nav>
+                </div>
+              </div>
+              <div className="navbar-mob">
+                <div className="nav-mob-con">
+                  <div className="nav-mob-black">
+                    <nav className="nav-mob">
+                      <ul className="mob-nav-list">
+                        <li className="nav-item-mob">
+                          <Scrollchor to="creator" className="nav-link-mob">
+                            FOR CREATORS & BRANDS
+                          </Scrollchor>
+                        </li>
+                        <li className="nav-item-mob">
+                          <Scrollchor to="webel" className="nav-link-mob">
+                            WE BELIEVE
+                          </Scrollchor>
+                        </li>
+                        <li className="nav-item-mob">
+                          <div className="nav-divider-mob"></div>
+                        </li>
+                        <li className="nav-item-mob gren-mob">
+                          <a href="/contact" to="_blank">
+                            CONTACT US
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
                 </div>
               </div>
             </div>
@@ -187,7 +242,7 @@ function Landing() {
                   <video src={p1} autoPlay={true} muted loop></video>
                 </div>
               </div>
-              <div className="lnd-grid-item img-left">
+              <div className="lnd-grid-item img-left box">
                 <div className="lnd-item-img-area">
                   <video src={p2} autoPlay={true} muted loop></video>
                 </div>
@@ -201,12 +256,12 @@ function Landing() {
                   </p>
                 </div>
               </div>
-              <div className="lnd-grid-item img-right">
+              <div className="lnd-grid-item img-right box">
                 <div className="lnd-item-wrt-area">
                   <h1>
                     Create <br /> Content
                   </h1>
-                  <p>
+                  <p id="webel">
                     Combine poses, animations and backgrounds to create
                     shareable and meme-able content on Instagram, Tiktok,
                     Twitter and Snapchat.
@@ -219,11 +274,11 @@ function Landing() {
             </div>
           </div>
         </section>
-        <section className="landing-message" id="webel">
+        <section className="landing-message">
           <div className="landing-m-container">
             <div className="landing-m-content">
               <h2>
-                COMMUNITY BUILDING: <br /> IT'S IN OUR DNA
+                we believe in creators: <br /> IT'S IN OUR DNA
               </h2>
             </div>
           </div>
@@ -263,7 +318,7 @@ function Landing() {
         <section className="landing-linksx">
           <div className="landing-links-container">
             <div className="landing-links">
-              <h1>Join The Rebellion</h1>
+              <h1 className="mover">Join The Rebellion</h1>
               <div className="lnd-links">
                 <div className="lnd-item">
                   <a href="#">
