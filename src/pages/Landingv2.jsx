@@ -1,5 +1,5 @@
 import React from "react";
-import herovid from "../videos/herovidv4.mp4";
+import herovid from "../videos/latest.mp4";
 import reblogowhite from "../images/REBLIUM.png";
 import { useEffect, useState } from "react";
 import reblogo from "../images/rebs.svg";
