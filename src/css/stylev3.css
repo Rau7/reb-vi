@@ -968,6 +968,18 @@ footer {
   font-size: 1.8rem;
 }
 
+.form-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item .error {
+  font-size: 12px;
+  color: #f86969;
+  margin-top: 2px;
+  padding-left: 5px;
+}
+
 .form-item h4 {
   font-family: "ResistSansBold", sans-serif;
   color: white;
@@ -1014,6 +1026,7 @@ form .form-item:not(:first-child) {
 .w-check {
   display: flex;
   align-items: center;
+  flex-direction: row;
   gap: 1.5rem;
 }
 
