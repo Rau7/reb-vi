@@ -1,17 +1,79 @@
-import React from "react";
-import reblogo from "../images/rebs.svg";
-import { FaCheck } from "react-icons/fa";
+import React, { useState, useEffect, useMemo } from "react";
+import toast from "react-hot-toast";
+import reblogo from "../images/REBLIUM.png";
+import api from "../api";
 import checked from "../images/checked.svg";
 import unchecked from "../images/unchecked.svg";
-import { useState } from "react";
 
 function Contact() {
-  let [isChecked, setChecked] = useState(false);
+  const [firstname, setFirstname] = useState(null);
+  const [lastname, setLastname] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [country, setCountry] = useState(null);
+  const [inquiry, setInquiry] = useState(null);
+  const [isChecked, setChecked] = useState(false);
+  const [errorFirstname, setErrorFirstname] = useState(null);
+  const [errorLastname, setErrorLastname] = useState(null);
+  const [errorEmail, setErrorEmail] = useState(null);
+  const [errorCountry, setErrorCountry] = useState(null);
+  const [errorInquiry, setErrorInquiry] = useState(null);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (!email) {
+      setErrorEmail("Please enter email address.");
+      return;
+    } else {
+      setErrorEmail(null);
+    }
+    if (!firstname) {
+      setErrorFirstname("Please enter first name.");
+      return;
+    } else {
+      setErrorFirstname(null);
+    }
+    if (!lastname) {
+      setErrorLastname("Please enter last name.");
+      return;
+    } else {
+      setErrorLastname(null);
+    }
+    if (!country) {
+      setErrorCountry("Please enter country name.");
+      return;
+    } else {
+      setErrorCountry(null);
+    }
+    if (!inquiry) {
+      setErrorInquiry("Please fill inquiry.");
+      return;
+    } else {
+      setErrorInquiry(null);
+    }
+
+    api.contactUs(
+      {
+        email: email,
+        last_name: firstname + " " + lastname,
+        country: country,
+        inquiry: inquiry,
+      },
+      (err, ret) => {
+        if (!err) {
+          toast.success("Your email has just sent Reblium support team.");
+        } else {
+          toast.error("You email hasn't sent!");
+        }
+      }
+    );
+  };
 
   const onSetCheck = () => {
     let tmpChecked = isChecked;
     setChecked(!tmpChecked);
   };
+
   return (
     <>
       <div className="loading-area">
@@ -26,7 +88,7 @@ function Contact() {
               <div className="header-black">
                 <div className="nav-area">
                   <div className="nav-logo">
-                    <a href="/">
+                    <a href="/contact">
                       <img src={reblogo} alt="reblium-logo" />
                     </a>
                   </div>
@@ -64,26 +126,78 @@ function Contact() {
               <p>All field marked with * are required</p>
             </div>
             <div className="contact-form">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="form-item">
                   <h4>Email Address *</h4>
-                  <input type="email" name="" className="form-input" />
+                  <input
+                    type="email"
+                    name=""
+                    className="form-input"
+                    defaultValue={email}
+                    onKeyUp={(e) => {
+                      setEmail(e.target.value);
+                    }}
+                  />
+                  {errorEmail?.length > 0 && (
+                    <span className="error">{errorEmail}</span>
+                  )}
                 </div>
                 <div className="form-item">
                   <h4>First Name *</h4>
-                  <input type="text" name="" className="form-input" />
+                  <input
+                    type="text"
+                    name=""
+                    className="form-input"
+                    defaultValue={firstname}
+                    onKeyUp={(e) => {
+                      setFirstname(e.target.value);
+                    }}
+                  />
+                  {errorFirstname?.length > 0 && (
+                    <span className="error">{errorFirstname}</span>
+                  )}
                 </div>
                 <div className="form-item">
                   <h4>Last Name *</h4>
-                  <input type="text" name="" className="form-input" />
+                  <input
+                    type="text"
+                    name=""
+                    className="form-input"
+                    defaultValue={lastname}
+                    onKeyUp={(e) => {
+                      setLastname(e.target.value);
+                    }}
+                  />
+                  {errorLastname?.length > 0 && (
+                    <span className="error">{errorLastname}</span>
+                  )}
                 </div>
                 <div className="form-item">
                   <h4>Country *</h4>
-                  <input type="text" name="" className="form-input" />
+                  <input
+                    type="text"
+                    name=""
+                    className="form-input"
+                    defaultValue={country}
+                    onKeyUp={(e) => {
+                      setCountry(e.target.value);
+                    }}
+                  />
+                  {errorCountry?.length > 0 && (
+                    <span className="error">{errorCountry}</span>
+                  )}
                 </div>
                 <div className="form-item">
                   <h4>Tell US More About Your Inquiry</h4>
-                  <textarea className="form-input-ta"></textarea>
+                  <textarea
+                    className="form-input-ta"
+                    onChange={(e) => setInquiry(e.target.value)}
+                  >
+                    {inquiry}
+                  </textarea>
+                  {errorInquiry?.length > 0 && (
+                    <span className="error">{errorInquiry}</span>
+                  )}
                 </div>
                 <div className="form-item w-check">
                   <img
@@ -98,7 +212,13 @@ function Contact() {
                   </p>
                 </div>
                 <div className="form-btn-area">
-                  <button className="form-sbmt footer-btn">Submit</button>
+                  <button
+                    className="form-sbmt footer-btn"
+                    type="submit"
+                    disabled={!isChecked}
+                  >
+                    Submit
+                  </button>
                 </div>
               </form>
             </div>
