@@ -1,5 +1,5 @@
 import React from "react";
-import reblogo from "../images/REBLIUM.png";
+import reblogo from "../images/rebs.svg";
 import { FaCheck } from "react-icons/fa";
 import checked from "../images/checked.svg";
 import unchecked from "../images/unchecked.svg";

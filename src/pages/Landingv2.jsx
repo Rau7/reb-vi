@@ -246,7 +246,7 @@ function Landing() {
                   <video src={p1} autoPlay={true} muted loop></video>
                 </div>
               </div>
-              <div className="lnd-grid-item img-left box">
+              <div className="lnd-grid-item img-left">
                 <div className="lnd-item-img-area">
                   <video src={p2} autoPlay={true} muted loop></video>
                 </div>
