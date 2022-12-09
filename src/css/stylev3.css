@@ -795,7 +795,7 @@ footer {
   border-radius: 10rem;
   position: relative;
   z-index: 2;
-  border: 1px solid transparent;
+  border: 1px solid black;
   transition: all 0.4s;
 }
 
@@ -1029,6 +1029,7 @@ form .form-item:not(:first-child) {
   line-height: 20px;
   color: white;
   letter-spacing: -5%;
+  margin-top: 2px;
 }
 
 .checkbox-image {
@@ -1041,7 +1042,7 @@ form .form-item:not(:first-child) {
 /* CONTACT BUTTON */
 
 .form-sbmt {
-  border: 1px solid transparent;
+  border: 1px solid black;
   cursor: pointer;
   margin-top: 3rem;
 }

@@ -101,6 +101,7 @@ function Landing() {
 
   const openCloseNav = () => {
     var x = document.querySelector(".navbar-mob");
+    document.querySelector(".container").classList.toggle("change");
     const headerCont = document.querySelector(".header-container");
     const navMobCon = document.querySelector(".nav-mob-con");
     if (x.style.display === "block") {
@@ -111,6 +112,8 @@ function Landing() {
       x.style.display = "block";
       headerCont.style.borderBottomRightRadius = "0px";
       headerCont.style.borderBottomLeftRadius = "0px";
+      navMobCon.style.borderBottomRightRadius = "20px";
+      navMobCon.style.borderBottomLeftRadius = "20px";
       navMobCon.style.borderTopLeftRadius = "0px";
       navMobCon.style.borderTopRightRadius = "0px";
     }
@@ -141,11 +144,11 @@ function Landing() {
                   <div className="nav-mob">
                     <div className="nav-mob-nav">
                       <div className="nav-mob-ham">
-                        <img
-                          src={ham}
-                          alt="reb-ham"
-                          onClick={() => openCloseNav()}
-                        />
+                        <div class="container" onClick={() => openCloseNav()}>
+                          <div class="bar1"></div>
+                          <div class="bar2"></div>
+                          <div class="bar3"></div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -401,27 +404,30 @@ function Landing() {
           <p>Anyone can become a virtual influencer</p>
           <div className="footer-links">
             <div className="footer-item">
-              <a href="#">
+              <a href="https://twitter.com/Reblium" target="_blank">
                 <FaTwitter className="footer-link-icon" />
               </a>
             </div>
             <div className="footer-item">
-              <a href="#">
+              <a href="https://www.tiktok.com/@reblium" target="_blank">
                 <FaTiktok className="footer-link-icon" />
               </a>
             </div>
             <div className="footer-item">
-              <a href="#">
+              <a href="https://www.instagram.com/reblium/" target="_blank">
                 <FaInstagram className="footer-link-icon" />
               </a>
             </div>
             <div className="footer-item">
-              <a href="#">
+              <a href="https://discord.gg/6CJjYJF6TJ" target="_blank">
                 <FaDiscord className="footer-link-icon" />
               </a>
             </div>
             <div className="footer-item">
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/company/reblium/"
+                target="_blank"
+              >
                 <FaLinkedin className="footer-link-icon" />
               </a>
             </div>
