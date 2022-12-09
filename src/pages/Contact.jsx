@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import toast from "react-hot-toast";
-import reblogo from "../images/REBLIUM.png";
+import reblogo from "../images/rebs.svg";
 import api from "../api";
 import checked from "../images/checked.svg";
 import unchecked from "../images/unchecked.svg";
@@ -88,7 +88,7 @@ function Contact() {
               <div className="header-black">
                 <div className="nav-area">
                   <div className="nav-logo">
-                    <a href="/contact">
+                    <a href="/">
                       <img src={reblogo} alt="reblium-logo" />
                     </a>
                   </div>

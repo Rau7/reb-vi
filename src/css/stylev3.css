@@ -84,6 +84,9 @@ img {
   height: 60px;
   width: 100%;
   z-index: 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-container {
@@ -91,7 +94,7 @@ img {
   width: 85%;
   margin: auto;
   border: solid 3px transparent;
-  border-radius: 40px;
+  border-radius: 30px;
   background-image: linear-gradient(black, black),
     linear-gradient(
       270deg,
@@ -104,6 +107,7 @@ img {
   background-clip: content-box, border-box;
   background-color: red;
   position: relative;
+  transition: all 0.3s;
 }
 
 .header-black {
@@ -157,6 +161,12 @@ img {
 
 .navbar-mob {
   display: none;
+  position: fixed;
+  top: 5rem;
+  height: 60px;
+  width: 85%;
+  z-index: 15;
+  transition: all 0.3s;
 }
 
 .nav-mob {
@@ -190,7 +200,7 @@ img {
 }
 
 .nav-item a:hover {
-  color: #cccccc;
+  color: rgba(235, 78, 230, 1);
 }
 
 .gren a {
@@ -198,7 +208,7 @@ img {
 }
 
 .gren a:hover {
-  color: #37a586;
+  color: rgba(235, 78, 230, 1);
 }
 
 .nav-divider {
@@ -572,16 +582,16 @@ img {
   align-items: center;
 }
 
-.box .lnd-item-wrt-area {
-  transform: translateX(-200vw);
-  transition: transform 0.75s linear;
+.box {
+  transform: translateX(-80vw);
+  transition: transform 0.65s linear;
 }
 
-.box:nth-of-type(even) .lnd-item-wrt-area {
-  transform: translateX(-200vw);
+.box:nth-of-type(even) {
+  transform: translateX(-80vw);
 }
 
-.box.show .lnd-item-wrt-area {
+.box.show {
   transform: translateX(0%);
 }
 
@@ -772,7 +782,7 @@ footer {
     90deg,
     rgba(78, 235, 192, 1) 10%,
     rgba(87, 51, 245, 1) 45%,
-    rgba(235, 78, 230, 1) 93%
+    rgba(235, 78, 230, 1) 104%
   );
   z-index: 1;
   height: 5.2rem;
@@ -785,29 +795,13 @@ footer {
   border-radius: 10rem;
   position: relative;
   z-index: 2;
+  border: 1px solid transparent;
+  transition: all 0.4s;
 }
 
-.footer-btn::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: linear-gradient(
-    90deg,
-    rgba(235, 78, 230, 1) 10%,
-    rgba(87, 51, 245, 1) 45%,
-    rgba(78, 235, 192, 1) 93%
-  );
-  z-index: -1;
-  transition: opacity 0.3s linear;
-  opacity: 0;
-  border-radius: 10rem;
-}
-
-.footer-btn:hover::before {
-  opacity: 1;
+.footer-btn:hover {
+  border: 1px solid black;
+  background: white;
 }
 
 /* END OF FOOTER */
@@ -1047,12 +1041,9 @@ form .form-item:not(:first-child) {
 /* CONTACT BUTTON */
 
 .form-sbmt {
-  border: 0px solid transparent;
+  border: 1px solid transparent;
   cursor: pointer;
   margin-top: 3rem;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-  height: 5rem;
 }
 
 /* END OF CONTACT BUTTON */

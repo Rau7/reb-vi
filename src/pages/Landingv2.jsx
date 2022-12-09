@@ -68,7 +68,7 @@ function Landing() {
 
     join.forEach((joinx) => {
       const triggerPoint = (window.innerHeight / 5) * 4;
-      const joinTop = joinx.getBoundingClientRect().top - 225;
+      const joinTop = joinx.getBoundingClientRect().top - 250;
 
       if (joinTop < triggerPoint) {
         //alert(`${triggerPoint} , ${boxTop} ilk trigger`);
@@ -101,10 +101,18 @@ function Landing() {
 
   const openCloseNav = () => {
     var x = document.querySelector(".navbar-mob");
+    const headerCont = document.querySelector(".header-container");
+    const navMobCon = document.querySelector(".nav-mob-con");
     if (x.style.display === "block") {
       x.style.display = "none";
+      headerCont.style.borderBottomRightRadius = "30px";
+      headerCont.style.borderBottomLeftRadius = "30px";
     } else {
       x.style.display = "block";
+      headerCont.style.borderBottomRightRadius = "0px";
+      headerCont.style.borderBottomLeftRadius = "0px";
+      navMobCon.style.borderTopLeftRadius = "0px";
+      navMobCon.style.borderTopRightRadius = "0px";
     }
   };
 
@@ -165,32 +173,32 @@ function Landing() {
                   </nav>
                 </div>
               </div>
-              <div className="navbar-mob">
-                <div className="nav-mob-con">
-                  <div className="nav-mob-black">
-                    <nav className="nav-mob">
-                      <ul className="mob-nav-list">
-                        <li className="nav-item-mob">
-                          <Scrollchor to="creator" className="nav-link-mob">
-                            FOR CREATORS & BRANDS
-                          </Scrollchor>
-                        </li>
-                        <li className="nav-item-mob">
-                          <Scrollchor to="webel" className="nav-link-mob">
-                            WE BELIEVE
-                          </Scrollchor>
-                        </li>
-                        <li className="nav-item-mob">
-                          <div className="nav-divider-mob"></div>
-                        </li>
-                        <li className="nav-item-mob gren-mob">
-                          <a href="/contact" to="_blank">
-                            CONTACT US
-                          </a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
+            </div>
+            <div className="navbar-mob">
+              <div className="nav-mob-con">
+                <div className="nav-mob-black">
+                  <nav className="nav-mob">
+                    <ul className="mob-nav-list">
+                      <li className="nav-item-mob">
+                        <Scrollchor to="creator" className="nav-link-mob">
+                          FOR CREATORS & BRANDS
+                        </Scrollchor>
+                      </li>
+                      <li className="nav-item-mob">
+                        <Scrollchor to="webel" className="nav-link-mob">
+                          WE BELIEVE
+                        </Scrollchor>
+                      </li>
+                      <li className="nav-item-mob">
+                        <div className="nav-divider-mob"></div>
+                      </li>
+                      <li className="nav-item-mob gren-mob">
+                        <a href="/contact" to="_blank">
+                          CONTACT US
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
                 </div>
               </div>
             </div>
@@ -232,9 +240,9 @@ function Landing() {
         <section className="landing-grid-area">
           <div className="landing-grid-container">
             <div className="lnd-grid-list">
-              <div className="lnd-grid-item img-right box">
+              <div className="lnd-grid-item img-right">
                 <div className="lnd-item-wrt-area">
-                  <h1>
+                  <h1 className="box">
                     Create <br /> Your Avatar
                   </h1>
                   <p>
@@ -260,9 +268,9 @@ function Landing() {
                   </p>
                 </div>
               </div>
-              <div className="lnd-grid-item img-right box">
+              <div className="lnd-grid-item img-right">
                 <div className="lnd-item-wrt-area">
-                  <h1>
+                  <h1 className="box">
                     Create <br /> Content
                   </h1>
                   <p id="webel">
