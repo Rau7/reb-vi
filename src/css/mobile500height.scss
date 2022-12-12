@@ -162,6 +162,7 @@
             video {
               height: 25rem;
               width: 100vw;
+              border-radius: 0px;
             }
           }
           .lnd-item-wrt-area {
@@ -600,6 +601,7 @@
             video {
               height: 25rem;
               width: 100vw;
+              border-radius: 0px;
             }
           }
           .lnd-item-wrt-area {
@@ -655,6 +657,7 @@
   //LANDING MESSAGE START
 
   .landing-message {
+    margin-top: -0.5rem;
     .landing-m-container {
       display: flex;
       justify-content: center;
@@ -703,7 +706,7 @@
   }
 
   .lnd-info-list .lnd-info-item:not(:first-child) {
-    margin-top: 8.5rem;
+    margin-top: 3.5rem;
   }
 
   // LANDING INFO END
@@ -1038,6 +1041,7 @@
             video {
               height: 25rem;
               width: 100vw;
+              border-radius: 0px;
             }
           }
           .lnd-item-wrt-area {

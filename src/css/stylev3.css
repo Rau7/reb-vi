@@ -94,7 +94,7 @@ img {
   width: 85%;
   margin: auto;
   border: solid 3px transparent;
-  border-radius: 30px;
+  border-radius: 30px 30px 30px 30px;
   background-image: linear-gradient(black, black),
     linear-gradient(
       270deg,
@@ -117,7 +117,7 @@ img {
   text-align: center;
   text-decoration: none;
   background-color: black;
-  border-radius: 30px;
+  border-radius: 30px 30px 30px 30px;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -366,10 +366,13 @@ img {
 }
 
 .corp-btn {
-  width: 200px;
-  height: 100%;
+  width: 25.9rem;
+  height: 7.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: solid 3px transparent;
-  border-radius: 30px;
+  border-radius: 100px;
   background-color: black;
   font-size: 16px;
   transition: all 0.3s ease-in-out;
@@ -584,12 +587,12 @@ img {
 }
 
 .box {
-  transform: translateX(-80vw);
-  transition: transform 0.65s linear;
+  transform: translateX(-100%);
+  transition: transform 0.5s linear;
 }
 
-.box:nth-of-type(even) {
-  transform: translateX(-80vw);
+.c2 {
+  transform: translateX(100%);
 }
 
 .box.show {
@@ -790,10 +793,11 @@ footer {
     rgba(235, 78, 230, 1) 104%
   );
   z-index: 1;
-  height: 5.2rem;
+  height: 7.7rem;
+  width: 25.9rem;
   padding-left: 4rem;
   padding-right: 4rem;
-  width: auto;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -823,12 +827,7 @@ button[disabled] {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(
-    90deg,
-    rgba(235, 78, 230, 1) 10%,
-    rgba(87, 51, 245, 1) 45%,
-    rgba(78, 235, 192, 1) 93%
-  );
+  background-image: linear-gradient(90deg, white 10%, white 45%, white 93%);
   z-index: -1;
   transition: opacity 0.3s linear;
   opacity: 0;
@@ -1094,6 +1093,7 @@ form .form-item:not(:first-child) {
 
 .form-sbmt {
   border: 1px solid black;
+  width: 25.9rem;
   cursor: pointer;
   margin-top: 3rem;
   padding-left: 2.5rem;

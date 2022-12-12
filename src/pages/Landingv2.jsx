@@ -101,15 +101,24 @@ function Landing() {
     var x = document.querySelector(".navbar-mob");
     document.querySelector(".container").classList.toggle("change");
     const headerCont = document.querySelector(".header-container");
+    const headerBlack = document.querySelector(".header-black");
     const navMobCon = document.querySelector(".nav-mob-con");
     if (x.style.display === "block") {
       x.style.display = "none";
-      headerCont.style.borderBottomRightRadius = "30px";
-      headerCont.style.borderBottomLeftRadius = "30px";
+      headerCont.style.borderRadius = "30px 30px 30px 30px";
+      headerBlack.style.borderRadius = "30px 30px 30px 30px";
     } else {
       x.style.display = "block";
+      headerCont.style.borderRadius = "30px 30px 0px 0px";
+      headerBlack.style.borderBottomRightRadius = "0px";
+      headerBlack.style.borderBottomLeftRadius = "0px";
+      headerBlack.style.borderTopLeftRadius = "30px";
+      headerBlack.style.borderTopRightRadius = "30px";
       headerCont.style.borderBottomRightRadius = "0px";
       headerCont.style.borderBottomLeftRadius = "0px";
+      headerCont.style.borderTopLeftRadius = "30px";
+      headerCont.style.borderTopRightRadius = "30px";
+      console.log(headerBlack.style, headerCont.style);
       navMobCon.style.borderBottomRightRadius = "20px";
       navMobCon.style.borderBottomLeftRadius = "20px";
       navMobCon.style.borderTopLeftRadius = "0px";
@@ -142,10 +151,13 @@ function Landing() {
                   <div className="nav-mob">
                     <div className="nav-mob-nav">
                       <div className="nav-mob-ham">
-                        <div class="container" onClick={() => openCloseNav()}>
-                          <div class="bar1"></div>
-                          <div class="bar2"></div>
-                          <div class="bar3"></div>
+                        <div
+                          className="container"
+                          onClick={() => openCloseNav()}
+                        >
+                          <div className="bar1"></div>
+                          <div className="bar2"></div>
+                          <div className="bar3"></div>
                         </div>
                       </div>
                     </div>
@@ -260,7 +272,7 @@ function Landing() {
                   <video src={p2} autoPlay={true} muted loop></video>
                 </div>
                 <div className="lnd-item-wrt-area">
-                  <h1>
+                  <h1 className="box c2">
                     Customize <br /> Your Style
                   </h1>
                   <p>

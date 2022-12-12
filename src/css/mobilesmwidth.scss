@@ -138,15 +138,15 @@ $xxl: 1400px;
       .bar1,
       .bar2,
       .bar3 {
-        width: 35px;
-        height: 5px;
+        width: 30px;
+        height: 3px;
         background-color: white;
         margin: 6px 0;
         transition: 0.4s;
       }
 
       .change .bar1 {
-        transform: translate(0, 11px) rotate(-45deg);
+        transform: translate(0, 8px) rotate(-45deg);
       }
 
       .change .bar2 {
@@ -154,7 +154,7 @@ $xxl: 1400px;
       }
 
       .change .bar3 {
-        transform: translate(0, -11px) rotate(45deg);
+        transform: translate(0, -10px) rotate(45deg);
       }
       img {
         width: 3rem;
@@ -202,7 +202,7 @@ $xxl: 1400px;
       h1 {
         margin-top: 2.5rem;
         color: black;
-        font-size: 3.6rem;
+        font-size: 4.4rem;
         margin-bottom: 2rem;
         text-transform: uppercase;
         line-height: 40px;
@@ -212,7 +212,7 @@ $xxl: 1400px;
 
       p {
         color: black;
-        font-size: 1.6rem;
+        font-size: 2.2rem;
         line-height: 28px;
       }
     }
@@ -288,14 +288,15 @@ $xxl: 1400px;
             video {
               height: 45rem;
               width: 100vw;
+              border-radius: 0px;
             }
           }
           .lnd-item-wrt-area {
             padding-left: 1rem;
             padding-right: 1rem;
             h1 {
-              font-size: 3.8rem;
-              line-height: 35px;
+              font-size: 4rem;
+              line-height: 40px;
               text-align: center;
               text-transform: uppercase;
             }
@@ -303,7 +304,7 @@ $xxl: 1400px;
             p {
               margin-top: 1rem;
               color: white;
-              font-size: 1.6rem;
+              font-size: 2rem;
               line-height: 20px;
             }
           }
@@ -343,6 +344,7 @@ $xxl: 1400px;
   //LANDING MESSAGE START
 
   .landing-message {
+    margin-top: -0.5rem;
     .landing-m-container {
       display: flex;
       justify-content: center;
@@ -391,7 +393,7 @@ $xxl: 1400px;
   }
 
   .lnd-info-list .lnd-info-item:not(:first-child) {
-    margin-top: 8.5rem;
+    margin-top: 3.5rem;
   }
 
   // LANDING INFO END
@@ -499,7 +501,8 @@ $xxl: 1400px;
   footer {
     .footer-container {
       .footer-btn {
-        height: 4rem;
+        height: 5rem;
+        width: 20.7rem;
         font-size: 1.3rem;
       }
       display: flex;

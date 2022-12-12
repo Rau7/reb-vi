@@ -36,6 +36,35 @@ function Contact() {
     }
   };
 
+  const openCloseNav = () => {
+    var x = document.querySelector(".navbar-mob");
+    document.querySelector(".container").classList.toggle("change");
+    const headerCont = document.querySelector(".header-container");
+    const headerBlack = document.querySelector(".header-black");
+    const navMobCon = document.querySelector(".nav-mob-con");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+      headerCont.style.borderRadius = "30px 30px 30px 30px";
+      headerBlack.style.borderRadius = "30px 30px 30px 30px";
+    } else {
+      x.style.display = "block";
+      headerCont.style.borderRadius = "30px 30px 0px 0px";
+      headerBlack.style.borderBottomRightRadius = "0px";
+      headerBlack.style.borderBottomLeftRadius = "0px";
+      headerBlack.style.borderTopLeftRadius = "30px";
+      headerBlack.style.borderTopRightRadius = "30px";
+      headerCont.style.borderBottomRightRadius = "0px";
+      headerCont.style.borderBottomLeftRadius = "0px";
+      headerCont.style.borderTopLeftRadius = "30px";
+      headerCont.style.borderTopRightRadius = "30px";
+      console.log(headerBlack, headerCont);
+      navMobCon.style.borderBottomRightRadius = "20px";
+      navMobCon.style.borderBottomLeftRadius = "20px";
+      navMobCon.style.borderTopLeftRadius = "0px";
+      navMobCon.style.borderTopRightRadius = "0px";
+    }
+  };
+
   useEffect(() => {
     getCountries();
   }, []);
@@ -110,7 +139,7 @@ function Contact() {
               <div className="header-black">
                 <div className="nav-area">
                   <div className="nav-logo">
-                    <a href="/contact">
+                    <a href="/">
                       <img src={reblogo} alt="reblium-logo" />
                     </a>
                   </div>
