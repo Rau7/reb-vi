@@ -109,7 +109,6 @@ function Landing() {
       headerBlack.style.borderRadius = "30px 30px 30px 30px";
     } else {
       x.style.display = "block";
-      headerCont.style.borderRadius = "30px 30px 0px 0px";
       headerBlack.style.borderBottomRightRadius = "0px";
       headerBlack.style.borderBottomLeftRadius = "0px";
       headerBlack.style.borderTopLeftRadius = "30px";
@@ -286,7 +285,7 @@ function Landing() {
                   <h1 className="box">
                     Create <br /> Content
                   </h1>
-                  <p id="webel">
+                  <p>
                     Combine poses, animations and backgrounds to create
                     shareable and meme-able content on Instagram, Tiktok,
                     Twitter and Snapchat.
@@ -295,6 +294,7 @@ function Landing() {
                 <div className="lnd-item-img-area">
                   <video src={p3} autoPlay={true} muted loop></video>
                 </div>
+                <div id="webel"></div>
               </div>
             </div>
           </div>
