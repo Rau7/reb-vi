@@ -345,6 +345,7 @@ $xxl: 1400px;
   .landing-grid-area {
     width: 100%;
     margin-top: 2.5rem;
+    overflow-x: hidden !important;
     display: flex;
     justify-content: center;
     margin-bottom: 0rem;
@@ -842,6 +843,7 @@ $xxl: 1400px;
     display: flex;
     justify-content: center;
     margin-bottom: 5rem;
+    overflow-x: hidden !important;
     .landing-grid-container {
       width: 100%;
       .lnd-grid-list {
