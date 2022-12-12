@@ -214,6 +214,7 @@ img {
 .nav-divider {
   width: 3px;
   height: 41px;
+  border-radius: 100rem;
   background-color: #4eebc0;
 }
 
@@ -367,7 +368,7 @@ img {
 .corp-btn {
   width: 200px;
   height: 100%;
-  border: double 3px transparent;
+  border: solid 3px transparent;
   border-radius: 30px;
   background-color: black;
   font-size: 16px;
@@ -387,7 +388,7 @@ img {
 .corp-btn:hover {
   background-color: transparent;
   background-color: white;
-  border: double 3px black;
+  border: solid 3px black;
 }
 
 .corp-btn:hover .corp-link h4 {
@@ -711,6 +712,10 @@ img {
   line-height: 40px;
 }
 
+.toast-container * {
+  font-size: 14px;
+}
+
 /* START OF LANDING INFO AREA */
 
 /* END OF LANDING INFO AREA */
@@ -799,9 +804,51 @@ footer {
   transition: all 0.4s;
 }
 
-.footer-btn:hover {
-  border: 1px solid black;
-  background: white;
+.footer-btn:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background: linear-gradient(
+    90.32deg,
+    #3f3c3c -3.32%,
+    rgba(187, 107, 217, 0) 134.13%
+  );
+  color: #666666;
+  cursor: initial;
+}
+
+.footer-btn::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    90deg,
+    rgba(235, 78, 230, 1) 10%,
+    rgba(87, 51, 245, 1) 45%,
+    rgba(78, 235, 192, 1) 93%
+  );
+  z-index: -1;
+  transition: opacity 0.3s linear;
+  opacity: 0;
+  border-radius: 10rem;
+}
+
+.footer-btn:disabled,
+button[disabled]::before {
+  border: 1px solid #999999;
+  background: linear-gradient(
+    90.32deg,
+    #3f3c3c -3.32%,
+    rgba(187, 107, 217, 0) 134.13%
+  );
+  color: #666666;
+  cursor: initial;
+}
+
+.footer-btn:hover::before {
+  opacity: 1;
 }
 
 /* END OF FOOTER */
@@ -994,6 +1041,10 @@ footer {
   font-family: "Poppins";
 }
 
+.select-text * {
+  font-size: 1.6rem !important;
+}
+
 form .form-item:not(:first-child) {
   margin-top: 3rem;
 }
@@ -1045,6 +1096,9 @@ form .form-item:not(:first-child) {
   border: 1px solid black;
   cursor: pointer;
   margin-top: 3rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  height: 5rem;
 }
 
 /* END OF CONTACT BUTTON */

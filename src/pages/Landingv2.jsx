@@ -16,8 +16,6 @@ import {
   FaBars,
 } from "react-icons/fa";
 import { Scrollchor } from "react-scrollchor";
-import ham from "../images/hamburger.svg";
-import { Char, Phrase } from "animatedtxt";
 
 function Landing() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -363,7 +361,10 @@ function Landing() {
                   </a>
                 </div>
                 <div className="lnd-item">
-                  <a href="#" target="_blank">
+                  <a
+                    href="https://www.youtube.com/@reblium8749"
+                    target="_blank"
+                  >
                     <FaYoutube className="lnd-link-icon" />
                   </a>
                 </div>
@@ -432,7 +433,7 @@ function Landing() {
               </a>
             </div>
             <div className="footer-item">
-              <a href="#">
+              <a href="https://www.youtube.com/@reblium8749" target="_blank">
                 <FaYoutube className="footer-link-icon" />
               </a>
             </div>

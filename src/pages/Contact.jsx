@@ -1,15 +1,18 @@
 import React, { useState, useEffect, useMemo } from "react";
+import { Country, State, City } from "country-state-city";
 import toast from "react-hot-toast";
 import reblogo from "../images/rebs.svg";
 import api from "../api";
 import checked from "../images/checked.svg";
 import unchecked from "../images/unchecked.svg";
+import { Scrollchor } from "react-scrollchor";
 
 function Contact() {
   const [firstname, setFirstname] = useState(null);
   const [lastname, setLastname] = useState(null);
   const [email, setEmail] = useState(null);
   const [country, setCountry] = useState(null);
+  const [countries, setCountries] = useState([]);
   const [inquiry, setInquiry] = useState(null);
   const [isChecked, setChecked] = useState(false);
   const [errorFirstname, setErrorFirstname] = useState(null);
@@ -17,6 +20,25 @@ function Contact() {
   const [errorEmail, setErrorEmail] = useState(null);
   const [errorCountry, setErrorCountry] = useState(null);
   const [errorInquiry, setErrorInquiry] = useState(null);
+
+  const getCountries = async () => {
+    try {
+      const result = await Country.getAllCountries();
+
+      let allCountries = [];
+      allCountries = result?.map(({ isoCode, name }) => ({
+        isoCode,
+        name,
+      }));
+      setCountries(allCountries);
+    } catch (error) {
+      setCountries([]);
+    }
+  };
+
+  useEffect(() => {
+    getCountries();
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -88,7 +110,7 @@ function Contact() {
               <div className="header-black">
                 <div className="nav-area">
                   <div className="nav-logo">
-                    <a href="/">
+                    <a href="/contact">
                       <img src={reblogo} alt="reblium-logo" />
                     </a>
                   </div>
@@ -105,6 +127,34 @@ function Contact() {
                       </li>
                       <li className="nav-item gren">
                         <a href="/contact">CONTACT US</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div className="navbar-mob">
+              <div className="nav-mob-con">
+                <div className="nav-mob-black">
+                  <nav className="nav-mob">
+                    <ul className="mob-nav-list">
+                      <li className="nav-item-mob">
+                        <Scrollchor to="creator" className="nav-link-mob">
+                          FOR CREATORS & BRANDS
+                        </Scrollchor>
+                      </li>
+                      <li className="nav-item-mob">
+                        <Scrollchor to="webel" className="nav-link-mob">
+                          WE BELIEVE
+                        </Scrollchor>
+                      </li>
+                      <li className="nav-item-mob">
+                        <div className="nav-divider-mob"></div>
+                      </li>
+                      <li className="nav-item-mob gren-mob">
+                        <a href="/contact" to="_blank">
+                          CONTACT US
+                        </a>
                       </li>
                     </ul>
                   </nav>
@@ -174,15 +224,21 @@ function Contact() {
                 </div>
                 <div className="form-item">
                   <h4>Country *</h4>
-                  <input
-                    type="text"
-                    name=""
-                    className="form-input"
-                    defaultValue={country}
-                    onKeyUp={(e) => {
-                      setCountry(e.target.value);
-                    }}
-                  />
+                  <select
+                    className="form-input select-text"
+                    value={country}
+                    onChange={(e) => setCountry(e.target.value)}
+                  >
+                    {countries.map(({ isoCode, name }) => (
+                      <option
+                        value={name}
+                        key={isoCode}
+                        selected={country == name ? "selected" : ""}
+                      >
+                        {name}
+                      </option>
+                    ))}
+                  </select>
                   {errorCountry?.length > 0 && (
                     <span className="error">{errorCountry}</span>
                   )}
