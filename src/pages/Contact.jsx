@@ -134,63 +134,6 @@ function Contact() {
       </div>
       <main className="contact-area">
         <div className="contact-container">
-          <div className="header">
-            <div className="header-container">
-              <div className="header-black">
-                <div className="nav-area">
-                  <div className="nav-logo">
-                    <a href="/">
-                      <img src={reblogo} alt="reblium-logo" />
-                    </a>
-                  </div>
-                  <nav>
-                    <ul className="nav-list">
-                      <li className="nav-item">
-                        <a href="/">FOR CREATORS & BRANDS</a>
-                      </li>
-                      <li className="nav-item">
-                        <a href="/">WE BELIEVE</a>
-                      </li>
-                      <li className="nav-item">
-                        <div className="nav-divider"></div>
-                      </li>
-                      <li className="nav-item gren">
-                        <a href="/contact">CONTACT US</a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-            <div className="navbar-mob">
-              <div className="nav-mob-con">
-                <div className="nav-mob-black">
-                  <nav className="nav-mob">
-                    <ul className="mob-nav-list">
-                      <li className="nav-item-mob">
-                        <Scrollchor to="creator" className="nav-link-mob">
-                          FOR CREATORS & BRANDS
-                        </Scrollchor>
-                      </li>
-                      <li className="nav-item-mob">
-                        <Scrollchor to="webel" className="nav-link-mob">
-                          WE BELIEVE
-                        </Scrollchor>
-                      </li>
-                      <li className="nav-item-mob">
-                        <div className="nav-divider-mob"></div>
-                      </li>
-                      <li className="nav-item-mob gren-mob">
-                        <a href="/contact" to="_blank">
-                          CONTACT US
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-          </div>
           <div className="contact-form-area">
             <div className="contact-form-header">
               <h1>

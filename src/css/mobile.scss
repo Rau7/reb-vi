@@ -8,6 +8,7 @@ $xxl: 1400px;
 @media (max-width: $xl) {
   .header-container {
     width: 93%;
+    border-radius: 20px;
   }
 
   .navbar-mob {
@@ -55,13 +56,7 @@ $xxl: 1400px;
         .nav-divider-mob {
           width: 100%;
           height: 3px;
-          background-image: linear-gradient(
-            270deg,
-            #4eebc0 0,
-            #5733f5 48.96%,
-            #5733f5 73.96%,
-            #eb4ee6 97.92%
-          );
+          background-color: #4eebc0;
         }
       }
     }
@@ -188,13 +183,7 @@ $xxl: 1400px;
         .nav-divider-mob {
           width: 100%;
           height: 1.5px;
-          background-image: linear-gradient(
-            270deg,
-            #4eebc0 0,
-            #5733f5 48.96%,
-            #5733f5 73.96%,
-            #eb4ee6 97.92%
-          );
+          background-color: #4eebc0;
         }
       }
     }
@@ -690,13 +679,7 @@ $xxl: 1400px;
         .nav-divider-mob {
           width: 100%;
           height: 1.5px;
-          background-image: linear-gradient(
-            270deg,
-            #4eebc0 0,
-            #5733f5 48.96%,
-            #5733f5 73.96%,
-            #eb4ee6 97.92%
-          );
+          background-color: #4eebc0;
         }
       }
     }

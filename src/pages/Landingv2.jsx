@@ -97,34 +97,6 @@ function Landing() {
     }
   };
 
-  const openCloseNav = () => {
-    var x = document.querySelector(".navbar-mob");
-    document.querySelector(".container").classList.toggle("change");
-    const headerCont = document.querySelector(".header-container");
-    const headerBlack = document.querySelector(".header-black");
-    const navMobCon = document.querySelector(".nav-mob-con");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-      headerCont.style.borderRadius = "30px 30px 30px 30px";
-      headerBlack.style.borderRadius = "30px 30px 30px 30px";
-    } else {
-      x.style.display = "block";
-      headerBlack.style.borderBottomRightRadius = "0px";
-      headerBlack.style.borderBottomLeftRadius = "0px";
-      headerBlack.style.borderTopLeftRadius = "30px";
-      headerBlack.style.borderTopRightRadius = "30px";
-      headerCont.style.borderBottomRightRadius = "0px";
-      headerCont.style.borderBottomLeftRadius = "0px";
-      headerCont.style.borderTopLeftRadius = "30px";
-      headerCont.style.borderTopRightRadius = "30px";
-      console.log(headerBlack.style, headerCont.style);
-      navMobCon.style.borderBottomRightRadius = "20px";
-      navMobCon.style.borderBottomLeftRadius = "20px";
-      navMobCon.style.borderTopLeftRadius = "0px";
-      navMobCon.style.borderTopRightRadius = "0px";
-    }
-  };
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -138,83 +110,6 @@ function Landing() {
       </div>
       <main>
         <section className="hero">
-          <div className="header">
-            <div className="header-container">
-              <div className="header-black">
-                <div className="nav-area">
-                  <div className="nav-logo">
-                    <Scrollchor to="" className="nav-link">
-                      <img src={reblogo} alt="reblium-logo" />
-                    </Scrollchor>
-                  </div>
-                  <div className="nav-mob">
-                    <div className="nav-mob-nav">
-                      <div className="nav-mob-ham">
-                        <div
-                          className="container"
-                          onClick={() => openCloseNav()}
-                        >
-                          <div className="bar1"></div>
-                          <div className="bar2"></div>
-                          <div className="bar3"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <nav>
-                    <ul className="nav-list">
-                      <li className="nav-item">
-                        <Scrollchor to="creator" className="nav-link">
-                          FOR CREATORS & BRANDS
-                        </Scrollchor>
-                      </li>
-                      <li className="nav-item">
-                        <Scrollchor to="webel" className="nav-link">
-                          WE BELIEVE
-                        </Scrollchor>
-                      </li>
-                      <li className="nav-item">
-                        <div className="nav-divider"></div>
-                      </li>
-                      <li className="nav-item gren">
-                        <a href="/contact" to="_blank">
-                          CONTACT US
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-            <div className="navbar-mob">
-              <div className="nav-mob-con">
-                <div className="nav-mob-black">
-                  <nav className="nav-mob">
-                    <ul className="mob-nav-list">
-                      <li className="nav-item-mob">
-                        <Scrollchor to="creator" className="nav-link-mob">
-                          FOR CREATORS & BRANDS
-                        </Scrollchor>
-                      </li>
-                      <li className="nav-item-mob">
-                        <Scrollchor to="webel" className="nav-link-mob">
-                          WE BELIEVE
-                        </Scrollchor>
-                      </li>
-                      <li className="nav-item-mob">
-                        <div className="nav-divider-mob"></div>
-                      </li>
-                      <li className="nav-item-mob gren-mob">
-                        <a href="/contact" to="_blank">
-                          CONTACT US
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-          </div>
           <div className="hero-container">
             <video src={herovid} autoPlay={true} muted loop></video>
             <div className="hero-exp">
