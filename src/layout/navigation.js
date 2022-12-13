@@ -38,9 +38,9 @@ const Navigation = (props) => {
         <div className="header-black">
           <div className="nav-area">
             <div className="nav-logo">
-              <Scrollchor to="" className="nav-link">
+              <a href="/" className="nav-link">
                 <img src={reblogo} alt="reblium-logo" />
-              </Scrollchor>
+              </a>
             </div>
             <div className="nav-mob">
               <div className="nav-mob-nav">
