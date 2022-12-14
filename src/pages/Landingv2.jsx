@@ -189,8 +189,8 @@ function Landing() {
                 <div className="lnd-item-img-area">
                   <video src={p3} autoPlay={true} muted loop></video>
                 </div>
-                <div id="webel"></div>
               </div>
+              <div id="webel"></div>
             </div>
           </div>
         </section>
