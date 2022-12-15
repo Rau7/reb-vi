@@ -1,5 +1,5 @@
 import React from "react";
-import herovid from "../videos/latest.mp4";
+import herovid from "../videos/lv.mp4";
 import reblogowhite from "../images/REBLIUM.png";
 import { useEffect, useState } from "react";
 import reblogo from "../images/rebs.svg";
@@ -13,7 +13,6 @@ import {
   FaDiscord,
   FaLinkedin,
   FaYoutube,
-  FaBars,
 } from "react-icons/fa";
 import { Scrollchor } from "react-scrollchor";
 
@@ -57,7 +56,6 @@ function Landing() {
       const boxTop = box.getBoundingClientRect().top - 225;
 
       if (boxTop < triggerPoint) {
-        //alert(`${triggerPoint} , ${boxTop} ilk trigger`);
         box.classList.add("show");
       } else {
         box.classList.remove("show");
@@ -69,7 +67,6 @@ function Landing() {
       const joinTop = joinx.getBoundingClientRect().top - 250;
 
       if (joinTop < triggerPoint) {
-        //alert(`${triggerPoint} , ${boxTop} ilk trigger`);
         joinx.classList.add("show");
       } else {
         joinx.classList.remove("show");
