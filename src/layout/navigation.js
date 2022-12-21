@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import reblogo from "../images/REBLIUM.png";
 import { Scrollchor } from "react-scrollchor";
+import { Route, Link, Redirect, useHistory } from "react-router-dom";
+import openCloseNav from "../helper/openclosenav";
 
 const Navigation = (props) => {
   const [modalHomeModal, setModalHomeModal] = useState(false);
@@ -16,31 +18,15 @@ const Navigation = (props) => {
     setModalHomeModal(false);
   };
 
-  const openCloseNav = () => {
-    var x = document.querySelector(".navbar-mob");
-    document.querySelector(".container").classList.toggle("change");
-
-    const headerCont = document.querySelector(".header-container");
-    const navMobCon = document.querySelector(".nav-mob-con");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-      headerCont.style.borderRadius = "20px";
-    } else {
-      x.style.display = "block";
-      headerCont.style.borderRadius = "20px 20px 0px 0px";
-      navMobCon.style.borderRadius = "0px 0px 20px 20px";
-    }
-  };
-
   return (
     <div className="header">
       <div className="header-container">
         <div className="header-black">
           <div className="nav-area">
             <div className="nav-logo">
-              <a href="/" className="nav-link">
+              <Link to="/" className="nav-link">
                 <img src={reblogo} alt="reblium-logo" />
-              </a>
+              </Link>
             </div>
             <div className="nav-mob">
               <div className="nav-mob-nav">
@@ -56,12 +42,12 @@ const Navigation = (props) => {
             <nav>
               <ul className="nav-list">
                 <li className="nav-item">
-                  <Scrollchor to="creator" className="nav-link">
+                  <Scrollchor to="#creator" className="nav-link">
                     FOR CREATORS & BRANDS
                   </Scrollchor>
                 </li>
                 <li className="nav-item">
-                  <Scrollchor to="webel" className="nav-link">
+                  <Scrollchor to="#webel" className="nav-link">
                     WE BELIEVE
                   </Scrollchor>
                 </li>
@@ -69,9 +55,7 @@ const Navigation = (props) => {
                   <div className="nav-divider"></div>
                 </li>
                 <li className="nav-item gren">
-                  <a href="/contact" to="_blank">
-                    CONTACT US
-                  </a>
+                  <Link to="/contact">CONTACT US</Link>
                 </li>
               </ul>
             </nav>
@@ -84,12 +68,20 @@ const Navigation = (props) => {
             <nav className="nav-mob">
               <ul className="mob-nav-list">
                 <li className="nav-item-mob">
-                  <Scrollchor to="creator" className="nav-link-mob">
+                  <Scrollchor
+                    to="#creator"
+                    animate={{ offset: -200 }}
+                    className="nav-link-mob"
+                  >
                     FOR CREATORS & BRANDS
                   </Scrollchor>
                 </li>
                 <li className="nav-item-mob">
-                  <Scrollchor to="webel" className="nav-link-mob">
+                  <Scrollchor
+                    to="#webel-mob"
+                    animate={{ offset: 120 }}
+                    className="nav-link-mob"
+                  >
                     WE BELIEVE
                   </Scrollchor>
                 </li>
@@ -97,9 +89,7 @@ const Navigation = (props) => {
                   <div className="nav-divider-mob"></div>
                 </li>
                 <li className="nav-item-mob gren-mob">
-                  <a href="/contact" to="_blank">
-                    CONTACT US
-                  </a>
+                  <Link to="/contact">CONTACT US</Link>
                 </li>
               </ul>
             </nav>

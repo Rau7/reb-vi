@@ -6,6 +6,7 @@ import api from "../api";
 import checked from "../images/checked.svg";
 import unchecked from "../images/unchecked.svg";
 import { Scrollchor } from "react-scrollchor";
+import openCloseNav from "../helper/openclosenav";
 
 function Contact() {
   const [firstname, setFirstname] = useState(null);
@@ -20,6 +21,7 @@ function Contact() {
   const [errorEmail, setErrorEmail] = useState(null);
   const [errorCountry, setErrorCountry] = useState(null);
   const [errorInquiry, setErrorInquiry] = useState(null);
+  const [isSubmit, setSubmit] = useState(false);
 
   const getCountries = async () => {
     try {
@@ -36,37 +38,10 @@ function Contact() {
     }
   };
 
-  const openCloseNav = () => {
-    var x = document.querySelector(".navbar-mob");
-    document.querySelector(".container").classList.toggle("change");
-    const headerCont = document.querySelector(".header-container");
-    const headerBlack = document.querySelector(".header-black");
-    const navMobCon = document.querySelector(".nav-mob-con");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-      headerCont.style.borderRadius = "30px 30px 30px 30px";
-      headerBlack.style.borderRadius = "30px 30px 30px 30px";
-    } else {
-      x.style.display = "block";
-      headerCont.style.borderRadius = "30px 30px 0px 0px";
-      headerBlack.style.borderBottomRightRadius = "0px";
-      headerBlack.style.borderBottomLeftRadius = "0px";
-      headerBlack.style.borderTopLeftRadius = "30px";
-      headerBlack.style.borderTopRightRadius = "30px";
-      headerCont.style.borderBottomRightRadius = "0px";
-      headerCont.style.borderBottomLeftRadius = "0px";
-      headerCont.style.borderTopLeftRadius = "30px";
-      headerCont.style.borderTopRightRadius = "30px";
-      console.log(headerBlack, headerCont);
-      navMobCon.style.borderBottomRightRadius = "20px";
-      navMobCon.style.borderBottomLeftRadius = "20px";
-      navMobCon.style.borderTopLeftRadius = "0px";
-      navMobCon.style.borderTopRightRadius = "0px";
-    }
-  };
-
   useEffect(() => {
     getCountries();
+    scrollToTop();
+    openCloseNavbar();
   }, []);
 
   const handleSubmit = (event) => {
@@ -112,7 +87,8 @@ function Contact() {
       },
       (err, ret) => {
         if (!err) {
-          toast.success("Your email has just sent Reblium support team.");
+          setSubmit(true);
+          // toast.success("Your email has just sent Reblium support team.");
         } else {
           toast.error("You email hasn't sent!");
         }
@@ -123,6 +99,25 @@ function Contact() {
   const onSetCheck = () => {
     let tmpChecked = isChecked;
     setChecked(!tmpChecked);
+  };
+
+  const scrollToTop = () => {
+    try {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    } catch (error) {
+      window.scrollTo(0, 0);
+    }
+  };
+
+  const openCloseNavbar = () => {
+    const navMob = document.querySelector(".navbar-mob");
+    if (navMob.style.display === "block") {
+      openCloseNav();
+    }
   };
 
   return (

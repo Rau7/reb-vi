@@ -1,6 +1,5 @@
 import React from "react";
 import herovid from "../videos/lv.mp4";
-import reblogowhite from "../images/REBLIUM.png";
 import { useEffect, useState } from "react";
 import reblogo from "../images/rebs.svg";
 import p1 from "../videos/p1.mp4";
@@ -15,37 +14,21 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { Scrollchor } from "react-scrollchor";
+import openCloseNav from "../helper/openclosenav";
 
 function Landing() {
-  const [width, setWidth] = useState(window.innerWidth);
-  const [height, setHeight] = useState(window.innerHeight);
   const [textDel, setTextDel] = useState(999999999);
-  const [heightTop, setHeightTop] = useState(
-    document.documentElement.scrollTop
-  );
-  const updateDimensions = () => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
-  };
-  useEffect(() => {
-    window.addEventListener("resize", updateDimensions);
-    return () => window.removeEventListener("resize", updateDimensions);
-  }, []);
-
-  const updateText = () => {
-    setHeightTop(document.documentElement.scrollTop);
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", updateText);
-    return () => window.removeEventListener("scroll", updateText);
-  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", handleBoxes);
     window.addEventListener("scroll", handleBigText);
     handleBoxes();
-    handleBigText(width, height, heightTop);
-  });
+    handleBigText();
+    return () => {
+      window.removeEventListener("scroll", handleBoxes);
+      window.removeEventListener("scroll", handleBigText);
+    };
+  }, []);
 
   function handleBoxes() {
     const boxes = document.querySelectorAll(".box");
@@ -74,7 +57,10 @@ function Landing() {
     });
   }
 
-  const handleBigText = (width, height, top) => {
+  const handleBigText = () => {
+    const height = window.innerHeight;
+    const width = window.innerWidth;
+    const top = document.documentElement.scrollTop;
     if (top > 3200) {
       setTextDel(1);
     } else {
@@ -95,7 +81,19 @@ function Landing() {
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    const navMob = document.querySelector(".navbar-mob");
+    if (navMob.style.display === "block") {
+      openCloseNav();
+    }
+    try {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    } catch (error) {
+      window.scrollTo(0, 0);
+    }
   }, []);
 
   return (
@@ -183,7 +181,7 @@ function Landing() {
                     Twitter and Snapchat.
                   </p>
                 </div>
-                <div className="lnd-item-img-area">
+                <div className="lnd-item-img-area" id="webel-mob">
                   <video src={p3} autoPlay={true} muted loop></video>
                 </div>
               </div>
@@ -303,7 +301,7 @@ function Landing() {
         <div className="footer-container">
           <div className="footer-logo">
             <Scrollchor to="" className="nav-link">
-              <img src={reblogowhite} alt="reblium-logo" />
+              <img src={reblogo} alt="reblium-logo" />
             </Scrollchor>
           </div>
           <p>Anyone can become a virtual influencer</p>

@@ -41,7 +41,8 @@ $xxl: 1400px;
         padding-left: 2.5rem;
         padding-right: 2.5rem;
         height: 4rem;
-        font-size: 1.6rem;
+        width: 200px;
+        font-size: 1.2rem;
       }
     }
   }
@@ -118,6 +119,9 @@ $xxl: 1400px;
         }
       }
     }
+  }
+  #webel {
+    display: none;
   }
   .nav-mob {
     display: block;
@@ -242,7 +246,7 @@ $xxl: 1400px;
   /* EXPAND */
   .expand-area {
     background-color: black;
-    padding: 5rem 1.5rem;
+    padding: 3rem 1.5rem;
     .expand-container {
       h1 {
         font-size: 2.8rem;
@@ -410,7 +414,7 @@ $xxl: 1400px;
           font-size: 3.4rem;
           text-align: left;
           line-height: 3.8rem;
-          margin-bottom: 4rem;
+          margin-bottom: 2rem;
         }
         .lnd-links {
           display: flex;
@@ -466,8 +470,8 @@ $xxl: 1400px;
       align-items: center;
       margin-bottom: 5rem;
       .corp-btn {
-        width: 150px;
-        height: 100%;
+        width: 200px;
+        height: 4rem;
         border: double 1px transparent;
         border-radius: 30px;
         background-color: black;
@@ -496,9 +500,9 @@ $xxl: 1400px;
   footer {
     .footer-container {
       .footer-btn {
-        height: 5rem;
-        width: 20.7rem;
-        font-size: 1.3rem;
+        height: 4rem;
+        width: 200px;
+        font-size: 1.1rem;
       }
       display: flex;
       flex-direction: column;
@@ -511,6 +515,7 @@ $xxl: 1400px;
       .footer-logo {
         .nav-link {
           img {
+            height: 2.5rem;
           }
         }
       }
