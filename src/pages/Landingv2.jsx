@@ -106,7 +106,10 @@ function Landing() {
       <main>
         <section className="hero">
           <div className="hero-container">
-            <video src={herovid} autoPlay={true} muted loop></video>
+            <video autoPlay={true} muted loop>
+              <source src={herovid} type="video/mp4" />
+              Your browser doesn't support HTML video.
+            </video>
             <div className="hero-exp">
               <h1>
                 Create
@@ -153,12 +156,18 @@ function Landing() {
                   </p>
                 </div>
                 <div className="lnd-item-img-area">
-                  <video src={p1} autoPlay={true} muted loop></video>
+                  <video autoPlay={true} muted loop>
+                    <source src={p1} type="video/mp4" />
+                    Your browser doesn't support HTML video.
+                  </video>
                 </div>
               </div>
               <div className="lnd-grid-item img-left">
                 <div className="lnd-item-img-area">
-                  <video src={p2} autoPlay={true} muted loop></video>
+                  <video autoPlay={true} muted loop>
+                    <source src={p2} type="video/mp4" />
+                    Your browser doesn't support HTML video.
+                  </video>
                 </div>
                 <div className="lnd-item-wrt-area">
                   <h1 className="box c2">
@@ -182,7 +191,10 @@ function Landing() {
                   </p>
                 </div>
                 <div className="lnd-item-img-area" id="webel-mob">
-                  <video src={p3} autoPlay={true} muted loop></video>
+                  <video autoPlay={true} muted loop>
+                    <source src={p3} type="video/mp4" />
+                    Your browser doesn't support HTML video.
+                  </video>
                 </div>
               </div>
               <div id="webel"></div>
