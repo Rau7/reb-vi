@@ -157,7 +157,7 @@ function Landing() {
                 </div>
                 <div className="lnd-item-img-area">
                   <video autoPlay={true} muted loop>
-                    <source src={p1} type="video/mp4" />
+                    <source src={p3} type="video/mp4" />
                     Your browser doesn't support HTML video.
                   </video>
                 </div>
