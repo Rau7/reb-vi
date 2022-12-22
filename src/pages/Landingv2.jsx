@@ -106,10 +106,15 @@ function Landing() {
       <main>
         <section className="hero">
           <div className="hero-container">
-            <video autoPlay={true} muted loop>
-              <source src={herovid} type="video/mp4" />
-              Your browser doesn't support HTML video.
-            </video>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `<video className="app__backgroundVideo" autoplay loop muted>
+                              <source src=${herovid} type="video/mp4" />
+                              Your browser does not support the video tag.
+                        </video>`,
+              }}
+            />
+
             <div className="hero-exp">
               <h1>
                 Create
@@ -156,18 +161,26 @@ function Landing() {
                   </p>
                 </div>
                 <div className="lnd-item-img-area">
-                  <video autoPlay={true} muted loop>
-                    <source src={p3} type="video/mp4" />
-                    Your browser doesn't support HTML video.
-                  </video>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: `<video className="app__backgroundVideo" autoplay loop muted>
+                              <source src=${p3} type="video/mp4" />
+                              Your browser does not support the video tag.
+                        </video>`,
+                    }}
+                  />
                 </div>
               </div>
               <div className="lnd-grid-item img-left">
                 <div className="lnd-item-img-area">
-                  <video autoPlay={true} muted loop>
-                    <source src={p2} type="video/mp4" />
-                    Your browser doesn't support HTML video.
-                  </video>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: `<video className="app__backgroundVideo" autoplay loop muted>
+                              <source src=${p2} type="video/mp4" />
+                              Your browser does not support the video tag.
+                        </video>`,
+                    }}
+                  />
                 </div>
                 <div className="lnd-item-wrt-area">
                   <h1 className="box c2">
@@ -191,10 +204,14 @@ function Landing() {
                   </p>
                 </div>
                 <div className="lnd-item-img-area" id="webel-mob">
-                  <video autoPlay={true} muted loop>
-                    <source src={p3} type="video/mp4" />
-                    Your browser doesn't support HTML video.
-                  </video>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: `<video className="app__backgroundVideo" autoplay loop muted>
+                              <source src=${p3} type="video/mp4" />
+                              Your browser does not support the video tag.
+                        </video>`,
+                    }}
+                  />
                 </div>
               </div>
               <div id="webel"></div>
