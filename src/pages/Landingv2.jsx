@@ -1,6 +1,6 @@
 import React from "react";
 import herovid from "../videos/lv.mp4";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import reblogo from "../images/rebs.svg";
 import p1 from "../videos/p1.mp4";
 import p2 from "../videos/peep2.mp4";
@@ -106,14 +106,15 @@ function Landing() {
       <main>
         <section className="hero">
           <div className="hero-container">
-            <div
-              dangerouslySetInnerHTML={{
-                __html: `<video className="app__backgroundVideo" autoplay loop muted>
-                              <source src=${herovid} type="video/mp4" />
-                              Your browser does not support the video tag.
-                        </video>`,
-              }}
-            />
+            <video
+              src={herovid}
+              muted
+              autoPlay={"autoplay"}
+              preLoad="auto"
+              loop
+            >
+              something
+            </video>
 
             <div className="hero-exp">
               <h1>
@@ -161,26 +162,28 @@ function Landing() {
                   </p>
                 </div>
                 <div className="lnd-item-img-area">
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: `<video className="app__backgroundVideo" autoplay loop muted>
-                              <source src=${p3} type="video/mp4" />
-                              Your browser does not support the video tag.
-                        </video>`,
-                    }}
-                  />
+                  <video
+                    src={p3}
+                    muted
+                    autoPlay={"autoplay"}
+                    preLoad="auto"
+                    loop
+                  >
+                    something
+                  </video>
                 </div>
               </div>
               <div className="lnd-grid-item img-left">
                 <div className="lnd-item-img-area">
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: `<video className="app__backgroundVideo" autoplay loop muted>
-                              <source src=${p2} type="video/mp4" />
-                              Your browser does not support the video tag.
-                        </video>`,
-                    }}
-                  />
+                  <video
+                    src={p2}
+                    muted
+                    autoPlay={"autoplay"}
+                    preLoad="auto"
+                    loop
+                  >
+                    something
+                  </video>
                 </div>
                 <div className="lnd-item-wrt-area">
                   <h1 className="box c2">
@@ -204,14 +207,15 @@ function Landing() {
                   </p>
                 </div>
                 <div className="lnd-item-img-area" id="webel-mob">
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: `<video className="app__backgroundVideo" autoplay loop muted>
-                              <source src=${p3} type="video/mp4" />
-                              Your browser does not support the video tag.
-                        </video>`,
-                    }}
-                  />
+                  <video
+                    src={p3}
+                    muted
+                    autoPlay={"autoplay"}
+                    preLoad="auto"
+                    loop
+                  >
+                    something
+                  </video>
                 </div>
               </div>
               <div id="webel"></div>
