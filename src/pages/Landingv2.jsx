@@ -112,6 +112,7 @@ function Landing() {
               autoPlay={"autoplay"}
               preLoad="auto"
               loop
+              playsInline
             >
               something
             </video>
