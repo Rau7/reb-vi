@@ -1,5 +1,5 @@
 import React from "react";
-import herovid from "../videos/lv.mp4";
+import herovid from "../videos/output.mp4";
 import { useEffect, useState, useRef } from "react";
 import reblogo from "../images/rebs.svg";
 import p1 from "../videos/p1.mp4";
