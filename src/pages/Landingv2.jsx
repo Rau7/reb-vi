@@ -19,6 +19,11 @@ import openCloseNav from "../helper/openclosenav";
 function Landing() {
   const [textDel, setTextDel] = useState(999999999);
 
+  const isSafari = () => {
+    const ua = navigator.userAgent.toLowerCase();
+    return ua.indexOf("safari") > -1 && ua.indexOf("chrome") < 0;
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleBoxes);
     window.addEventListener("scroll", handleBigText);
@@ -169,6 +174,7 @@ function Landing() {
                     autoPlay={"autoplay"}
                     preLoad="auto"
                     loop
+                    playsInline
                   >
                     something
                   </video>
@@ -182,6 +188,7 @@ function Landing() {
                     autoPlay={"autoplay"}
                     preLoad="auto"
                     loop
+                    playsInline
                   >
                     something
                   </video>
@@ -214,6 +221,7 @@ function Landing() {
                     autoPlay={"autoplay"}
                     preLoad="auto"
                     loop
+                    playsInline
                   >
                     something
                   </video>
