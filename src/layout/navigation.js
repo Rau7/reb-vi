@@ -64,7 +64,7 @@ const Navigation = (props) => {
       </div>
       <div className="navbar-mob">
         <div className="nav-mob-con">
-          <div className="nav-mob-black">
+          <div className="nav-mob-black" onClick={() => openCloseNav()}>
             <nav className="nav-mob">
               <ul className="mob-nav-list">
                 <li className="nav-item-mob">
