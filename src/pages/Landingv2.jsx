@@ -1,10 +1,10 @@
 import React from "react";
-import herovid from "../videos/output.mp4";
+import herovid from "../videos/main.mp4";
 import { useEffect, useState, useRef } from "react";
 import reblogo from "../images/rebs.svg";
-import p1 from "../videos/p1.mp4";
-import p2 from "../videos/peep2.mp4";
-import p3 from "../videos/peep3.mp4";
+import p1 from "../videos/one.mp4";
+import p2 from "../videos/two.mp4";
+import p3 from "../videos/three.mp4";
 import {
   FaTwitter,
   FaTiktok,
@@ -169,7 +169,7 @@ function Landing() {
                 </div>
                 <div className="lnd-item-img-area">
                   <video
-                    src={p3}
+                    src={p1}
                     muted
                     autoPlay={"autoplay"}
                     preLoad="auto"

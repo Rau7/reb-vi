@@ -678,7 +678,7 @@ img {
 
 .lnd-item-img-area video {
   width: 400px;
-  height: 500px;
+  height: auto;
   object-fit: cover;
   border-radius: 1rem;
 }
